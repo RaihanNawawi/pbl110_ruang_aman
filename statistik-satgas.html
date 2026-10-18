@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="main-container">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
+        <a class="role-nav-link" href="dashboard-satgas.html">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link" href="chat-list.html">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            Chat & Tindak Lanjut
+        </a>
+        <a class="role-nav-link active" href="statistik-satgas.html" aria-current="page">
+            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+            Rekapitulasi
+        </a>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="mb-4">
+
+        <h1 class="stats-title">
+            Rekapitulasi & Statistik
+        </h1>
+
+        <p class="stats-description mb-0">
+            Pantau perkembangan laporan, distribusi kasus, dan
+            hasil penanganan Satgas PPKS.
+        </p>
+
+    </section>
+
+    <!-- Filter Periode -->
+    <section class="stats-card mb-4">
+
+        <form action="detail-statistik-satgas.html" method="get">
+
+            <div class="row g-3 align-items-end">
+
+                <div class="col-12 col-md-4">
+
+                    <label for="periode" class="form-label stats-filter-label">
+                        Periode Laporan
+                    </label>
+
+                    <select id="periode"
+                            name="periode"
+                            class="form-select stats-filter-control">
+
+                        <option value="bulan-ini">Bulan Ini</option>
+                        <option value="bulan-lalu">Bulan Lalu</option>
+                        <option value="3-bulan">3 Bulan Terakhir</option>
+                        <option value="tahun-ini">Tahun Ini</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+
+                    <label for="kategori"
+                           class="form-label stats-filter-label">
+
+                        Kategori Kasus
+
+                    </label>
+
+                    <select id="kategori"
+                            name="kategori"
+                            class="form-select stats-filter-control">
+
+                        <option value="">Semua Kategori</option>
+                        <option value="verbal">Verbal</option>
+                        <option value="nonverbal">Nonverbal</option>
+                        <option value="cyberbullying">Cyberbullying</option>
+                        <option value="lainnya">Lainnya</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+
+                    <button type="submit"
+                            class="btn btn-primary w-100"
+                            style="min-height:42px;">
+
+                        <i class="fa-solid fa-filter me-2"></i>
+                        Terapkan Filter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- Summary Statistics -->
+    <section class="row g-3 mb-4">
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stats-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="stats-icon bg-primary-subtle text-primary">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <div class="stats-number">66</div>
+                        <div class="stats-label">Total Laporan</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stats-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="stats-icon bg-warning-subtle text-warning">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+
+                    <div>
+                        <div class="stats-number">18</div>
+                        <div class="stats-label">Dalam Proses</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stats-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="stats-icon bg-info-subtle text-info">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <div class="stats-number">6</div>
+                        <div class="stats-label">Menunggu Informasi</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="stats-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="stats-icon bg-success-subtle text-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <div class="stats-number">32</div>
+                        <div class="stats-label">Selesai</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Distribution -->
+    <section class="row g-3 mb-4">
+
+        <!-- Kategori -->
+        <div class="col-12 col-lg-6">
+
+            <div class="stats-card">
+
+                <h2 class="stats-card-title">
+                    Distribusi Kategori Kasus
+                </h2>
+
+                <p class="stats-muted mb-4">
+                    Jumlah laporan berdasarkan kategori kejadian.
+                </p>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Verbal</span>
+                        <strong>24 laporan</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:36.4%;background:#2563eb;"></div>
+                    </div>
+
+                </div>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Nonverbal</span>
+                        <strong>18 laporan</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:27.3%;background:#16a34a;"></div>
+                    </div>
+
+                </div>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Cyberbullying</span>
+                        <strong>12 laporan</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:18.2%;background:#9333ea;"></div>
+                    </div>
+
+                </div>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Kategori Lainnya</span>
+                        <strong>12 laporan</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:18.2%;background:#f59e0b;"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Status -->
+        <div class="col-12 col-lg-6">
+
+            <div class="stats-card">
+
+                <h2 class="stats-card-title">
+                    Distribusi Status Laporan
+                </h2>
+
+                <p class="stats-muted mb-4">
+                    Perkembangan laporan berdasarkan status penanganan.
+                </p>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Laporan Baru</span>
+                        <strong>10</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:15.2%;background:#f59e0b;"></div>
+                    </div>
+
+                </div>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Dalam Penanganan</span>
+                        <strong>18</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:27.3%;background:#2563eb;"></div>
+                    </div>
+
+                </div>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Menunggu Informasi</span>
+                        <strong>6</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:9.1%;background:#9333ea;"></div>
+                    </div>
+
+                </div>
+
+                <div class="stats-progress-row">
+
+                    <div class="stats-progress-label">
+                        <span>Selesai</span>
+                        <strong>32</strong>
+                    </div>
+
+                    <div class="stats-progress">
+                        <div class="stats-progress-bar"
+                             style="width:48.5%;background:#16a34a;"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Trend -->
+    <section class="stats-card mb-4">
+
+        <div class="d-flex flex-column flex-sm-row
+                    justify-content-between gap-2 mb-3">
+
+            <div>
+
+                <h2 class="stats-card-title mb-1">
+                    Tren Laporan Bulanan
+                </h2>
+
+                <p class="stats-muted mb-0">
+                    Perbandingan jumlah laporan dalam enam bulan terakhir.
+                </p>
+
+            </div>
+
+            <span class="badge text-bg-light align-self-start">
+                6 Bulan
+            </span>
+
+        </div>
+
+        <div class="stats-chart">
+
+            <div class="stats-chart-column">
+
+                <span class="stats-chart-value">8</span>
+
+                <div class="stats-chart-bar"
+                     style="height:25%;"></div>
+
+                <span class="stats-chart-label">Apr</span>
+
+            </div>
+
+            <div class="stats-chart-column">
+
+                <span class="stats-chart-value">12</span>
+
+                <div class="stats-chart-bar"
+                     style="height:37.5%;"></div>
+
+                <span class="stats-chart-label">Mei</span>
+
+            </div>
+
+            <div class="stats-chart-column">
+
+                <span class="stats-chart-value">10</span>
+
+                <div class="stats-chart-bar"
+                     style="height:31.25%;"></div>
+
+                <span class="stats-chart-label">Jun</span>
+
+            </div>
+
+            <div class="stats-chart-column">
+
+                <span class="stats-chart-value">15</span>
+
+                <div class="stats-chart-bar"
+                     style="height:46.875%;"></div>
+
+                <span class="stats-chart-label">Jul</span>
+
+            </div>
+
+            <div class="stats-chart-column">
+
+                <span class="stats-chart-value">9</span>
+
+                <div class="stats-chart-bar"
+                     style="height:28.125%;"></div>
+
+                <span class="stats-chart-label">Agu</span>
+
+            </div>
+
+            <div class="stats-chart-column">
+
+                <span class="stats-chart-value">12</span>
+
+                <div class="stats-chart-bar"
+                     style="height:37.5%;"></div>
+
+                <span class="stats-chart-label">Sep</span>
+
+            </div>
+
+        </div>
+
+        <p class="stats-muted mt-3 mb-0">
+            Catatan: data pada grafik merupakan ilustrasi untuk MVP.
+        </p>
+
+    </section>
+
+    <!-- Recent Reports -->
+    <section class="stats-card">
+
+        <div class="d-flex justify-content-between
+                    align-items-center gap-3 mb-3">
+
+            <h2 class="stats-card-title mb-0">
+                Laporan Terbaru
+            </h2>
+
+            <a href="detail-statistik-satgas.html"
+               class="small text-primary text-nowrap">
+
+                Lihat Semua
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+            </a>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-hover stats-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Nomor Tiket</th>
+                        <th>Kategori</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Detail</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td class="stats-ticket">
+                            RA-20260928-7F3K9
+                        </td>
+
+                        <td>Verbal</td>
+
+                        <td>28 Sep 2026</td>
+
+                        <td>
+                            <span class="stats-badge stats-badge-process">
+                                Dalam Penanganan
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="detail-laporan-satgas.html"
+                               class="btn btn-sm btn-outline-primary">
+
+                                Lihat
+
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="stats-ticket">
+                            RA-20260927-9Q2M4
+                        </td>
+
+                        <td>Nonverbal</td>
+
+                        <td>27 Sep 2026</td>
+
+                        <td>
+                            <span class="stats-badge stats-badge-waiting">
+                                Menunggu Informasi
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="detail-laporan-satgas.html"
+                               class="btn btn-sm btn-outline-primary">
+
+                                Lihat
+
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="stats-ticket">
+                            RA-20260926-1A8Q7
+                        </td>
+
+                        <td>Cyberbullying</td>
+
+                        <td>26 Sep 2026</td>
+
+                        <td>
+                            <span class="stats-badge stats-badge-done">
+                                Selesai
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="detail-laporan-satgas.html"
+                               class="btn btn-sm btn-outline-primary">
+
+                                Lihat
+
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

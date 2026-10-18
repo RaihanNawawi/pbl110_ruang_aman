@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="verification-container">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
+        <a class="role-nav-link" href="dashboard-satgas.html">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link" href="chat-list.html">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            Chat & Tindak Lanjut
+        </a>
+        <a class="role-nav-link" href="statistik-satgas.html">
+            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+            Rekapitulasi
+        </a>
+    </nav>
+
+    <section class="verification-card mx-auto"
+             style="max-width: 760px;">
+
+        <!-- Status -->
+        <div class="text-center mb-4">
+
+            <div class="d-inline-flex align-items-center justify-content-center
+                        rounded-circle bg-success-subtle text-success mb-3"
+                 style="width: 76px; height: 76px;">
+
+                <i class="fa-solid fa-circle-check fs-1"></i>
+
+            </div>
+
+            <h1 class="verification-title">
+                Verifikasi Berhasil Disimpan
+            </h1>
+
+            <p class="verification-description mb-0">
+                Hasil verifikasi laporan telah dicatat.
+                Laporan dapat dilanjutkan ke proses penanganan.
+            </p>
+
+        </div>
+
+        <!-- Ringkasan -->
+        <div class="p-3 p-md-4 rounded-3 bg-light mb-4">
+
+            <div class="verification-label mb-2">
+                Nomor Tiket
+            </div>
+
+            <div class="fs-5 fw-bold mb-3">
+                RA-20260928-7F3K9
+            </div>
+
+            <div class="verification-row">
+
+                <span class="verification-label">
+                    Hasil Verifikasi
+                </span>
+
+                <span class="verification-status verification-status-success">
+                    Informasi Cukup
+                </span>
+
+            </div>
+
+            <div class="verification-row">
+
+                <span class="verification-label">
+                    Status Berikutnya
+                </span>
+
+                <span class="verification-value">
+                    Siap Ditindaklanjuti
+                </span>
+
+            </div>
+
+            <div class="verification-row">
+
+                <span class="verification-label">
+                    Waktu Verifikasi
+                </span>
+
+                <span class="verification-value">
+                    28 September 2026, 14.30
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- Catatan -->
+        <div class="mb-4">
+
+            <h2 class="verification-card-title">
+                Catatan Verifikasi
+            </h2>
+
+            <p class="verification-description mb-0">
+                Informasi utama telah diperiksa. Bukti pendukung
+                tersedia dan laporan dapat dilanjutkan ke proses
+                penanganan sesuai prosedur yang berlaku.
+            </p>
+
+        </div>
+
+        <!-- Informasi -->
+        <div class="verification-info mb-4">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+                <strong>Langkah Berikutnya</strong>
+
+                <div class="mt-1">
+                    Lanjutkan penanganan sesuai prosedur Satgas PPKS.
+                    Pastikan setiap tindakan dan perubahan status
+                    terdokumentasi.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="d-flex flex-column flex-sm-row gap-2">
+
+            <a href="dashboard-satgas.html"
+               class="btn btn-outline-secondary verification-button flex-fill">
+
+                <i class="fa-solid fa-arrow-left me-2"></i>
+                Dashboard Satgas
+
+            </a>
+
+            <a href="detail-laporan-satgas.html"
+               class="btn btn-primary verification-button flex-fill">
+
+                <i class="fa-solid fa-file-lines me-2"></i>
+                Detail Laporan
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

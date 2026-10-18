@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="main-container">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
+        <a class="role-nav-link active" href="dashboard-satgas.html" aria-current="page">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link" href="chat-list.html">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            Chat & Tindak Lanjut
+        </a>
+        <a class="role-nav-link" href="statistik-satgas.html">
+            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+            Rekapitulasi
+        </a>
+    </nav>
+
+    <!-- Heading -->
+    <section class="mb-4">
+
+        <h1 class="case-page-title">
+            Dashboard Satgas
+        </h1>
+
+        <p class="case-description mb-0">
+            Pantau laporan yang ditugaskan kepada Anda dan
+            lanjutkan proses penanganannya.
+        </p>
+
+    </section>
+
+    <!-- Statistik Satgas -->
+    <section class="row g-3 mb-4">
+
+        <div class="col-6 col-lg-4">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-primary-subtle text-primary">
+                    <i class="fa-solid fa-inbox"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">8</div>
+                    <div class="case-stat-label">Ditugaskan</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-4">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-warning-subtle text-warning">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">5</div>
+                    <div class="case-stat-label">Dalam Proses</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-lg-4">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-success-subtle text-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">12</div>
+                    <div class="case-stat-label">Selesai Ditangani</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Filter -->
+    <section class="case-card mb-4">
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between gap-3">
+
+            <div>
+
+                <h2 class="case-card-title mb-1">
+                    Laporan Saya
+                </h2>
+
+                <p class="case-muted mb-0">
+                    Daftar laporan yang menjadi tanggung jawab Anda.
+                </p>
+
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row gap-2">
+
+                <input
+                    type="search"
+                    class="form-control case-form-control"
+                    placeholder="Cari nomor tiket..."
+                    aria-label="Cari nomor tiket"
+                >
+
+                <select
+                    class="form-select case-form-control"
+                    aria-label="Filter status"
+                >
+                    <option value="">Semua Status</option>
+                    <option value="assigned">Ditugaskan</option>
+                    <option value="progress">Dalam Proses</option>
+                    <option value="waiting">Menunggu Informasi</option>
+                    <option value="completed">Selesai</option>
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Daftar Kasus -->
+    <section class="d-flex flex-column gap-3">
+
+        <!-- Kasus 1 -->
+        <a href="detail-laporan-satgas.html" class="case-list-item">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+                <div class="flex-grow-1">
+
+                    <h2 class="case-list-title">
+                        RA-20260928-7F3K9
+                    </h2>
+
+                    <div class="case-list-meta">
+                        Verbal · 28 September 2026 · Ruang Kelas
+                    </div>
+
+                </div>
+
+                <span class="case-status case-status-progress">
+                    Dalam Penanganan
+                </span>
+
+            </div>
+
+            <div class="d-flex justify-content-between
+                        align-items-center mt-3">
+
+                <span class="case-list-meta">
+                    Tingkat Kekhawatiran: 4 / 5
+                </span>
+
+                <i class="fa-solid fa-chevron-right text-secondary"></i>
+
+            </div>
+
+        </a>
+
+        <!-- Kasus 2 -->
+        <a href="detail-laporan-satgas.html" class="case-list-item">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+                <div class="flex-grow-1">
+
+                    <h2 class="case-list-title">
+                        RA-20260927-9Q2M4
+                    </h2>
+
+                    <div class="case-list-meta">
+                        Nonverbal · 27 September 2026 · Kantin
+                    </div>
+
+                </div>
+
+                <span class="case-status case-status-waiting">
+                    Menunggu Informasi
+                </span>
+
+            </div>
+
+            <div class="d-flex justify-content-between
+                        align-items-center mt-3">
+
+                <span class="case-list-meta">
+                    Tingkat Kekhawatiran: 3 / 5
+                </span>
+
+                <i class="fa-solid fa-chevron-right text-secondary"></i>
+
+            </div>
+
+        </a>
+
+        <!-- Kasus 3 -->
+        <a href="detail-laporan-satgas.html" class="case-list-item">
+
+            <div class="d-flex justify-content-between
+                        align-items-start gap-3">
+
+                <div class="flex-grow-1">
+
+                    <h2 class="case-list-title">
+                        RA-20260926-1A8Q7
+                    </h2>
+
+                    <div class="case-list-meta">
+                        Cyberbullying · 26 September 2026 · Online
+                    </div>
+
+                </div>
+
+                <span class="case-status case-status-progress">
+                    Dalam Penanganan
+                </span>
+
+            </div>
+
+            <div class="d-flex justify-content-between
+                        align-items-center mt-3">
+
+                <span class="case-list-meta">
+                    Tingkat Kekhawatiran: 5 / 5
+                </span>
+
+                <i class="fa-solid fa-chevron-right text-secondary"></i>
+
+            </div>
+
+        </a>
+
+    </section>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

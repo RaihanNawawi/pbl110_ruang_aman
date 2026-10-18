@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+<!-- Main Content -->
+ <main class="tracking-container tracking-lookup-page">
+
+    <div class="text-center mb-4">
+
+        <h1 class="tracking-title">
+            Lacak Laporan RuangAman
+        </h1>
+
+        <p class="tracking-description mb-0">
+            Pilih cara masuk sesuai jenis pelaporan Anda.
+        </p>
+
+    </div>
+
+    <section class="tracking-card lookup-card">
+
+        <div class="text-center lookup-card-heading">
+
+            <div class="lookup-heading-icon">
+
+                <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+
+            </div>
+
+            <h2 class="tracking-section-title">
+                Lacak laporan
+            </h2>
+
+            <p class="tracking-muted mb-0">
+                Gunakan data pada bukti laporan yang Anda terima.
+            </p>
+
+        </div>
+
+        <ul class="nav nav-pills lookup-tabs" id="lookupModes" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active"
+                    id="anonymous-mode-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#anonymous-mode"
+                    type="button"
+                    role="tab"
+                    aria-controls="anonymous-mode"
+                    aria-selected="true"
+                >
+                    <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
+                    Anonim
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="identified-mode-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#identified-mode"
+                    type="button"
+                    role="tab"
+                    aria-controls="identified-mode"
+                    aria-selected="false"
+                >
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    Teridentifikasi
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content lookup-tab-content">
+            <div
+                class="tab-pane fade show active"
+                id="anonymous-mode"
+                role="tabpanel"
+                aria-labelledby="anonymous-mode-tab"
+                tabindex="0"
+            >
+                <p class="lookup-mode-description">
+                    Masukkan kode tiket dan kode akses.
+                </p>
+
+                <form action="status-laporan.html" method="get">
+                    <div class="row g-2">
+                        <div class="col-12 col-sm-6">
+                            <label for="anonymous-ticket" class="form-label tracking-label">
+                                Nomor Tiket <span class="text-danger">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control tracking-input"
+                                id="anonymous-ticket"
+                                name="ticket"
+                                placeholder="RA-20260928-7F3K9"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <label for="anonymous-access-code" class="form-label tracking-label">
+                                Kode Akses Tiket <span class="text-danger">*</span>
+                            </label>
+                            <input
+                                type="password"
+                                class="form-control tracking-input"
+                                id="anonymous-access-code"
+                                name="access_code"
+                                placeholder="Masukkan kode akses"
+                                autocomplete="off"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100 tracking-button">
+                                <i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>
+                                Lihat Status Laporan
+                                <i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div
+                class="tab-pane fade"
+                id="identified-mode"
+                role="tabpanel"
+                aria-labelledby="identified-mode-tab"
+                tabindex="0"
+            >
+                <p class="lookup-mode-description">
+                    Gunakan email dan nomor tiket saat melapor.
+                </p>
+
+                <form action="status-laporan.html" method="get">
+                    <div class="row g-2">
+                        <div class="col-12 col-sm-6">
+                            <label for="identified-email" class="form-label tracking-label">
+                                Email Aktif <span class="text-danger">*</span>
+                            </label>
+                            <input
+                                type="email"
+                                class="form-control tracking-input"
+                                id="identified-email"
+                                name="email"
+                                placeholder="nama@email.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <label for="identified-ticket" class="form-label tracking-label">
+                                Nomor Tiket <span class="text-danger">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control tracking-input"
+                                id="identified-ticket"
+                                name="ticket"
+                                placeholder="RA-20260928-7F3K9"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100 tracking-button">
+                                <i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>
+                                Lihat Status Laporan
+                                <i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="lookup-qr-option">
+            <div class="lookup-divider"><span>atau</span></div>
+            <div class="lookup-qr-content">
+                <div class="lookup-qr-icon">
+                    <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </div>
+                <div class="lookup-qr-copy">
+                    <strong>Pindai QR pada bukti laporan</strong>
+                    <span>Scan QR untuk langsung membuka status laporan.</span>
+                </div>
+                <input
+                    class="visually-hidden"
+                    type="file"
+                    id="report-qr"
+                    accept="image/*"
+                    capture="environment"
+                    aria-label="Pilih atau foto QR pada bukti laporan"
+                >
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

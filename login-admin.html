@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="login-container">
+
+    <section class="login-card">
+
+        <div class="text-center">
+
+            <div class="login-icon login-icon-purple">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <h1 class="login-title">
+                Masuk sebagai Administrator
+            </h1>
+
+            <p class="login-description">
+                Gunakan akun administrator Anda untuk mengelola
+                laporan, Satgas, dan pengaturan sistem.
+            </p>
+
+        </div>
+
+        <form action="dashboard-admin.html" method="get">
+
+            <div class="mb-3">
+
+                <label for="email-admin" class="form-label login-label">
+                    Email <span class="text-danger">*</span>
+                </label>
+
+                <input
+                    type="email"
+                    class="form-control login-input"
+                    id="email-admin"
+                    name="email"
+                    placeholder="nama@polibatam.ac.id"
+                    autocomplete="username"
+                    required
+                >
+
+            </div>
+
+            <div class="mb-2">
+
+                <label for="password-admin" class="form-label login-label">
+                    Password <span class="text-danger">*</span>
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        class="form-control login-input"
+                        id="password-admin"
+                        name="password"
+                        placeholder="Masukkan password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-label="Tampilkan password"
+                        aria-pressed="false"
+                        onclick="togglePassword('password-admin', this)"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="text-end mb-4">
+
+                <a href="lupa-password.html"
+                   class="small text-primary">
+                    Lupa password?
+                </a>
+
+            </div>
+
+            <button type="submit"
+                    class="login-button login-button-purple">
+
+                Masuk
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+        <div class="login-divider">
+            atau
+        </div>
+
+        <div class="text-center mt-4">
+
+            <a href="login.html" class="small text-secondary">
+                <i class="fa-solid fa-arrow-left me-1"></i>
+                Kembali ke Pilihan Role
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+    function togglePassword(inputId, button) {
+        const input = document.getElementById(inputId);
+        const icon = button.querySelector('i');
+
+        const isPassword = input.type === 'password';
+
+        input.type = isPassword ? 'text' : 'password';
+
+        icon.classList.toggle('fa-eye', !isPassword);
+        icon.classList.toggle('fa-eye-slash', isPassword);
+
+        button.setAttribute('aria-pressed', String(isPassword));
+
+        button.setAttribute(
+            'aria-label',
+            isPassword ? 'Sembunyikan password' : 'Tampilkan password'
+        );
+    }
+</script>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

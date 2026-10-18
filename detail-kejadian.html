@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Konten khusus Beranda -->
+<main class="app-container">
+
+    <h1 class="page-title">Buat Laporan Kekerasan</h1>
+
+    <p class="page-description">
+        Ceritakan kejadian yang ingin Anda laporkan.
+    </p>
+
+    <div class="stepper">
+
+        <div class="step completed">
+            <div class="step-number">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="step-label">Data Diri</div>
+        </div>
+
+        <div class="step active">
+            <div class="step-number">2</div>
+            <div class="step-label">Detail Kejadian</div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-label">Pelaku & Bukti</div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-label">Konfirmasi</div>
+        </div>
+
+    </div>
+
+    <form action="pelaku-bukti.html" method="get">
+
+        <section class="form-card">
+
+            <h2 class="form-section-title">Detail Kejadian</h2>
+
+            <p class="form-text mb-4">
+                Jelaskan informasi mengenai kejadian yang Anda laporkan.
+            </p>
+
+            <!-- Kategori -->
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Kategori Kasus <span class="required">*</span>
+                </label>
+
+                <div class="row g-2">
+
+                    <div class="col-12 col-md-4">
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="kategori"
+                                value="verbal"
+                                required
+                            >
+                            <i class="fa-solid fa-comment"></i>
+                            <div>
+                                <div class="choice-title">Verbal</div>
+                                <div class="choice-description">
+                                    Cacian, hinaan, ancaman, dan sejenisnya.
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="kategori"
+                                value="nonverbal"
+                            >
+                            <i class="fa-solid fa-hand"></i>
+                            <div>
+                                <div class="choice-title">Nonverbal</div>
+                                <div class="choice-description">
+                                    Tindakan fisik atau gestur yang tidak pantas.
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="kategori"
+                                value="cyberbullying"
+                            >
+                            <i class="fa-solid fa-laptop"></i>
+                            <div>
+                                <div class="choice-title">Cyberbullying</div>
+                                <div class="choice-description">
+                                    Pelecehan melalui media digital.
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row g-3 mb-4">
+
+                <div class="col-12 col-md-6">
+                    <label for="tanggal" class="form-label">
+                        Tanggal Kejadian <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="tanggal"
+                        name="tanggal"
+                        required
+                    >
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="lokasi" class="form-label">
+                        Lokasi Kejadian <span class="required">*</span>
+                    </label>
+
+                    <select
+                        class="form-select"
+                        id="lokasi"
+                        name="lokasi"
+                        required
+                    >
+                        <option value="">Pilih lokasi</option>
+                        <option value="ruang-kelas">Ruang Kelas</option>
+                        <option value="laboratorium">Laboratorium</option>
+                        <option value="perpustakaan">Perpustakaan</option>
+                        <option value="kantin">Kantin</option>
+                        <option value="toilet">Toilet</option>
+                        <option value="area-kampus">Area Kampus Lainnya</option>
+                        <option value="online">Media Digital / Online</option>
+                        <option value="lainnya">Lokasi Lainnya</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label for="kronologi" class="form-label">
+                    Kronologi Kejadian <span class="required">*</span>
+                </label>
+
+                <textarea
+                    class="form-control"
+                    id="kronologi"
+                    name="kronologi"
+                    maxlength="1000"
+                    placeholder="Ceritakan kejadian secara jelas, termasuk waktu, tempat, dan situasi yang terjadi."
+                    required
+                ></textarea>
+
+                <div class="form-text">
+                     Hindari memasukkan informasi yang tidak relevan.
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+
+                <a href="data-diri.html" class="btn btn-outline-secondary">
+                    <i class="fa-solid fa-arrow-left me-2"></i>
+                    Kembali
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                    Lanjut ke Pelaku & Bukti
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+    </form>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

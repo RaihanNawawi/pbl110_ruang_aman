@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="main-container">
+
+    <!-- Heading -->
+    <section class="mb-4">
+
+        <h1 class="ra-heading">
+            Kontak Darurat
+        </h1>
+
+        <p class="ra-description mb-0">
+            Temukan layanan bantuan yang dapat dihubungi ketika
+            Anda atau orang di sekitar membutuhkan pertolongan.
+        </p>
+
+    </section>
+
+    <!-- Emergency Alert -->
+    <section class="ra-alert ra-alert-danger mb-4">
+
+        <div class="ra-icon ra-icon-red">
+
+            <i class="fa-solid fa-phone-volume"></i>
+
+        </div>
+
+        <div>
+
+            <h2 class="fs-6 fw-bold mb-2">
+                Membutuhkan bantuan segera?
+            </h2>
+
+            <p class="mb-0">
+                Jika berada dalam bahaya langsung, prioritaskan
+                keselamatan diri dan hubungi layanan darurat resmi
+                yang tersedia di wilayah Anda.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Contact List -->
+    <section class="mb-4">
+
+        <h2 class="ra-section-title">
+            Kontak Layanan
+        </h2>
+
+        <p class="ra-description mb-3">
+            Berikut beberapa jenis layanan yang dapat dihubungi
+            untuk mendapatkan bantuan, pendampingan, atau informasi
+            lebih lanjut.
+        </p>
+
+        <div class="d-flex flex-column gap-3">
+
+            <!-- Satgas -->
+            <article class="ra-card">
+
+                <div class="ra-contact-card">
+
+                    <div class="ra-icon ra-icon-green">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div class="ra-contact-description">
+
+                        <h3 class="ra-contact-title">
+                            Satgas PPKS Kampus
+                        </h3>
+
+                        <p class="ra-muted mb-2">
+                            Layanan pengaduan dan pendampingan
+                            di lingkungan kampus.
+                        </p>
+
+                        <div class="ra-muted">
+                            Informasi kontak mengikuti data resmi
+                            yang ditetapkan pihak kampus.
+                        </div>
+
+                    </div>
+
+                    <div class="ra-contact-actions">
+
+                        <a href="detail-kontak.html?layanan=satgas"
+                           class="btn btn-outline-primary btn-sm">
+
+                            Informasi Layanan
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Emergency Services -->
+            <article class="ra-card">
+
+                <div class="ra-contact-card">
+
+                    <div class="ra-icon ra-icon-red">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+                    <div class="ra-contact-description">
+
+                        <h3 class="ra-contact-title">
+                            Layanan Darurat
+                        </h3>
+
+                        <p class="ra-muted mb-2">
+                            Untuk kondisi yang membutuhkan pertolongan
+                            segera, seperti ancaman keselamatan.
+                        </p>
+
+                        <div class="ra-muted">
+                            Gunakan nomor layanan resmi sesuai
+                            wilayah dan jenis keadaan darurat.
+                        </div>
+
+                    </div>
+
+                    <div class="ra-contact-actions">
+
+                        <a href="detail-kontak.html?layanan=darurat"
+                           class="btn btn-outline-primary btn-sm">
+
+                            Lihat Informasi
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Health Services -->
+            <article class="ra-card">
+
+                <div class="ra-contact-card">
+
+                    <div class="ra-icon ra-icon-blue">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                    </div>
+
+                    <div class="ra-contact-description">
+
+                        <h3 class="ra-contact-title">
+                            Layanan Kesehatan / Konseling
+                        </h3>
+
+                        <p class="ra-muted mb-2">
+                            Informasi bantuan kesehatan dan konseling
+                            bagi pengguna yang membutuhkan dukungan.
+                        </p>
+
+                        <div class="ra-muted">
+                            Hubungi fasilitas kesehatan atau layanan
+                            konseling resmi yang tersedia.
+                        </div>
+
+                    </div>
+
+                    <div class="ra-contact-actions">
+
+                        <a href="detail-kontak.html?layanan=kesehatan"
+                           class="btn btn-outline-primary btn-sm">
+
+                            Informasi Layanan
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- Back to Home -->
+    <div class="mt-4">
+
+        <a href="index.html"
+           class="btn btn-outline-secondary">
+
+            <i class="fa-solid fa-arrow-left me-2"></i>
+            Kembali ke Beranda
+
+        </a>
+
+    </div>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

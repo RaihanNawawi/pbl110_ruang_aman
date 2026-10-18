@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="main-container">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Admin">
+        <a class="role-nav-link active" href="dashboard-admin.html" aria-current="page">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link" href="#laporan-baru">
+            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+            Laporan
+        </a>
+        <a class="role-nav-link" href="pengguna-admin.html">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            Manajemen Pengguna
+        </a>
+    </nav>
+
+    <!-- Heading -->
+    <section class="mb-4">
+
+        <h1 class="case-page-title">Dashboard Admin</h1>
+
+        <p class="case-description mb-0">
+            Kelola laporan, tetapkan Satgas, dan pantau perkembangan
+            penanganan kasus RuangAman.
+        </p>
+
+    </section>
+
+    <!-- Statistik -->
+    <section class="row g-3 mb-4">
+
+        <div class="col-6 col-lg-3">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-warning-subtle text-warning">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">12</div>
+                    <div class="case-stat-label">Laporan Baru</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-primary-subtle text-primary">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">18</div>
+                    <div class="case-stat-label">Dalam Proses</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-danger-subtle text-danger">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">4</div>
+                    <div class="case-stat-label">Prioritas Tinggi</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-lg-3">
+
+            <div class="case-stat">
+
+                <div class="case-stat-icon bg-success-subtle text-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <div class="case-stat-number">32</div>
+                    <div class="case-stat-label">Selesai</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Laporan Baru -->
+    <section class="case-card mb-4" id="laporan-baru">
+
+        <div class="mb-3">
+
+            <h2 class="case-card-title mb-0">Laporan Baru</h2>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-hover case-table">
+
+                <thead>
+                    <tr>
+                        <th>No. Tiket</th>
+                        <th>Kategori</th>
+                        <th>Tanggal</th>
+                        <th>Tingkat</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <span class="case-ticket">
+                                RA-20260928-7F3K9
+                            </span>
+                        </td>
+
+                        <td>Verbal</td>
+                        <td>28 Sep 2026</td>
+
+                        <td>
+                            <span class="case-status case-status-new">
+                                4 / 5
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="detail-laporan-admin.html"
+                               class="btn btn-primary btn-sm">
+                                Periksa
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="case-ticket">
+                                RA-20260928-2KBL1
+                            </span>
+                        </td>
+
+                        <td>Cyberbullying</td>
+                        <td>28 Sep 2026</td>
+
+                        <td>
+                            <span class="case-status bg-danger-subtle text-danger">
+                                5 / 5
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="detail-laporan-admin.html"
+                               class="btn btn-primary btn-sm">
+                                Periksa
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="case-ticket">
+                                RA-20260927-9Q2M4
+                            </span>
+                        </td>
+
+                        <td>Nonverbal</td>
+                        <td>27 Sep 2026</td>
+
+                        <td>
+                            <span class="case-status case-status-new">
+                                3 / 5
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="detail-laporan-admin.html"
+                               class="btn btn-primary btn-sm">
+                                Periksa
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Distribusi dan Statistik -->
+    <section class="row g-3">
+
+        <!-- Distribusi Satgas -->
+        <div class="col-12 col-lg-6">
+
+            <div class="case-card">
+
+                <h2 class="case-card-title">
+                    Distribusi Laporan Satgas
+                </h2>
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+
+                    <div class="rounded-circle bg-primary-subtle
+                                text-primary d-flex align-items-center
+                                justify-content-center"
+                         style="width: 40px; height: 40px;">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="fw-semibold small">Siti Rahma</div>
+
+                        <div class="case-muted">
+                            3 laporan · 2 dalam proses
+                        </div>
+
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar"
+                                 style="width: 60%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="small fw-semibold">60%</span>
+
+                </div>
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+
+                    <div class="rounded-circle bg-success-subtle
+                                text-success d-flex align-items-center
+                                justify-content-center"
+                         style="width: 40px; height: 40px;">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="fw-semibold small">Ahmad Fauzi</div>
+
+                        <div class="case-muted">
+                            5 laporan · 3 dalam proses
+                        </div>
+
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar bg-success"
+                                 style="width: 60%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="small fw-semibold">60%</span>
+
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="rounded-circle bg-warning-subtle
+                                text-warning d-flex align-items-center
+                                justify-content-center"
+                         style="width: 40px; height: 40px;">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="fw-semibold small">Dewi Putri</div>
+
+                        <div class="case-muted">
+                            4 laporan · 1 dalam proses
+                        </div>
+
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar bg-warning"
+                                 style="width: 25%;"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="small fw-semibold">25%</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Ringkasan Kategori -->
+        <div class="col-12 col-lg-6">
+
+            <div class="case-card">
+
+                <h2 class="case-card-title">
+                    Statistik Kategori Kasus
+                </h2>
+
+                <div class="d-flex flex-column gap-3">
+
+                    <div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small">Verbal</span>
+                            <span class="small fw-semibold">24</span>
+                        </div>
+
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar"
+                                 style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small">Nonverbal</span>
+                            <span class="small fw-semibold">18</span>
+                        </div>
+
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success"
+                                 style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small">Cyberbullying</span>
+                            <span class="small fw-semibold">12</span>
+                        </div>
+
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning"
+                                 style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small">Kategori Lainnya</span>
+                            <span class="small fw-semibold">6</span>
+                        </div>
+
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info"
+                                 style="width: 20%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="border-top mt-4 pt-3 d-flex
+                            justify-content-between align-items-center">
+
+                    <span class="case-muted">Total kategori</span>
+
+                    <span class="fw-bold">60 laporan</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

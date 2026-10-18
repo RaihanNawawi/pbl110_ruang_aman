@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Konten khusus Beranda -->
+<main class="app-container">
+
+    <h1 class="page-title">Buat Laporan Kekerasan</h1>
+
+    <p class="page-description">
+        Lengkapi informasi berikut untuk melanjutkan proses pelaporan.
+    </p>
+
+    <!-- Stepper -->
+    <div class="stepper">
+
+        <div class="step active">
+            <div class="step-number">1</div>
+            <div class="step-label">Data Diri</div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-label">Detail Kejadian</div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-label">Pelaku & Bukti</div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-label">Konfirmasi</div>
+        </div>
+
+    </div>
+
+    <!-- Form -->
+    <form action="detail-kejadian.html" method="get">
+
+        <section class="form-card">
+
+            <h2 class="form-section-title">Data Diri Pelapor</h2>
+
+            <p class="form-text mb-4">
+                Pilih apakah Anda ingin menyampaikan identitas. Data diri hanya
+                diminta jika Anda memilih pelaporan teridentifikasi.
+            </p>
+
+            <fieldset class="mb-4 border-0 p-0">
+                <legend class="form-label">
+                    Jenis Pelaporan
+                    <span class="required">*</span>
+                </legend>
+
+                <div class="row g-2">
+                    <div class="col-12 col-sm-6">
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="jenis_pelaporan"
+                                value="anonim"
+                                required
+                            >
+                            <i class="fa-solid fa-user-secret"></i>
+                            <span>
+                                <span class="choice-title d-block">Anonim</span>
+                                <span class="choice-description d-block">Identitas tidak perlu diisi.</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="jenis_pelaporan"
+                                value="teridentifikasi"
+                            >
+                            <i class="fa-solid fa-user"></i>
+                            <span>
+                                <span class="choice-title d-block">Teridentifikasi</span>
+                                <span class="choice-description d-block">Isi data diri untuk dihubungi.</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="anonymous-message" class="alert alert-info" role="status" aria-live="polite" hidden>
+                Anda memilih melapor secara anonim. Kolom identitas tidak perlu diisi dan Anda dapat langsung melanjutkan ke tahap berikutnya.
+            </div>
+
+            <div id="identitas-fields" hidden>
+                <div class="mb-4">
+                    <label class="form-label">
+                        Jenis Civitas Akademika
+                        <span class="required">*</span>
+                    </label>
+
+                    <div class="row g-2">
+                        <div class="col-12 col-sm-4">
+                            <label class="choice-card">
+                                <input
+                                    type="radio"
+                                    name="civitas"
+                                    value="mahasiswa"
+                                    required
+                                >
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span class="choice-title">Mahasiswa</span>
+                            </label>
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label class="choice-card">
+                                <input
+                                    type="radio"
+                                    name="civitas"
+                                    value="dosen"
+                                >
+                                <i class="fa-solid fa-user-tie"></i>
+                                <span class="choice-title">Dosen</span>
+                            </label>
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label class="choice-card">
+                                <input
+                                    type="radio"
+                                    name="civitas"
+                                    value="tenaga-kependidikan"
+                                >
+                                <i class="fa-solid fa-user-gear"></i>
+                                <span class="choice-title">Tenaga Kependidikan</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="nim" class="form-label">
+                        NIM / NIP
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="nim"
+                        name="nim"
+                        placeholder="Masukkan NIM atau NIP"
+                        required
+                    >
+
+                    <div class="form-text">
+                        Masukkan nomor identitas akademik Anda.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        Email Aktif
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="nama@email.com"
+                        required
+                    >
+
+                    <div class="form-text">
+                        Email digunakan untuk komunikasi terkait laporan.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions justify-content-end">
+                <button type="submit" class="btn btn-primary">
+                    Lanjut ke Detail Kejadian
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+
+        </section>
+
+    </form>
+
+</main>
+
+<script>
+    const reportTypeInputs = document.querySelectorAll('input[name="jenis_pelaporan"]');
+    const identityFields = document.getElementById("identitas-fields");
+    const anonymousMessage = document.getElementById("anonymous-message");
+    const identityInputs = identityFields.querySelectorAll("input");
+
+    function updateReportType() {
+        const selectedType = document.querySelector('input[name="jenis_pelaporan"]:checked')?.value;
+        const isIdentified = selectedType === "teridentifikasi";
+
+        identityFields.hidden = !isIdentified;
+        anonymousMessage.hidden = selectedType !== "anonim";
+        identityInputs.forEach((input) => {
+            input.disabled = !isIdentified;
+        });
+    }
+
+    reportTypeInputs.forEach((input) => {
+        input.addEventListener("change", updateReportType);
+    });
+    updateReportType();
+</script>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

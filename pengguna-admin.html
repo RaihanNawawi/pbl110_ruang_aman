@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+   <main class="main-container">
+
+       <nav class="role-nav mb-4" aria-label="Navigasi Admin">
+           <a class="role-nav-link" href="dashboard-admin.html">
+               <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+               Dashboard
+           </a>
+           <a class="role-nav-link active" href="pengguna-admin.html" aria-current="page">
+               <i class="fa-solid fa-users" aria-hidden="true"></i>
+               Manajemen Pengguna
+           </a>
+       </nav>
+
+    <!-- Page Heading -->
+    <section class="mb-4">
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between align-items-md-center gap-3">
+
+            <div>
+
+                <h1 class="user-title">
+                    Manajemen Pengguna
+                </h1>
+
+                <p class="user-description mb-0">
+                    Kelola akun, peran, dan hak akses pengguna RuangAman.
+                </p>
+
+            </div>
+
+            <a href="form-pengguna-admin.html"
+               class="btn btn-primary">
+
+                <i class="fa-solid fa-user-plus me-2"></i>
+                Tambah Pengguna
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Summary -->
+    <section class="row g-3 mb-4">
+
+        <div class="col-6 col-xl-3">
+
+            <div class="user-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="user-stat-icon bg-primary-subtle text-primary">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <div class="user-stat-number">128</div>
+                        <div class="user-muted">Total Pengguna</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-xl-3">
+
+            <div class="user-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="user-stat-icon bg-success-subtle text-success">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+
+                    <div>
+                        <div class="user-stat-number">116</div>
+                        <div class="user-muted">Akun Aktif</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-xl-3">
+
+            <div class="user-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="user-stat-icon bg-danger-subtle text-danger">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div>
+                        <div class="user-stat-number">2</div>
+                        <div class="user-muted">Administrator</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 col-xl-3">
+
+            <div class="user-card">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="user-stat-icon bg-warning-subtle text-warning">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+
+                    <div>
+                        <div class="user-stat-number">12</div>
+                        <div class="user-muted">Akun Nonaktif</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- User Table -->
+    <section class="user-card">
+
+        <div class="mb-4">
+
+            <h2 class="user-card-title mb-1">
+                Daftar Pengguna
+            </h2>
+
+            <p class="user-muted mb-0">
+                Cari dan kelola akun yang terdaftar di sistem.
+            </p>
+
+        </div>
+
+        <!-- Search & Filters -->
+        <form action="pengguna-admin.html"
+              method="get"
+              class="mb-4">
+
+            <div class="row g-3">
+
+                <div class="col-12 col-lg-5">
+
+                    <label for="search-user"
+                           class="form-label user-form-label">
+
+                        Cari Pengguna
+
+                    </label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                        </span>
+
+                        <input
+                            type="search"
+                            class="form-control user-form-control"
+                            id="search-user"
+                            name="q"
+                            placeholder="Nama atau email pengguna..."
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <label for="filter-role"
+                           class="form-label user-form-label">
+
+                        Peran
+
+                    </label>
+
+                    <select class="form-select user-form-control"
+                            id="filter-role"
+                            name="role">
+
+                        <option value="">Semua Peran</option>
+                        <option value="admin">Administrator</option>
+                        <option value="satgas">Satgas PPKS</option>
+                        <option value="pelapor">Pelapor</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-6 col-lg-2">
+
+                    <label for="filter-status"
+                           class="form-label user-form-label">
+
+                        Status
+
+                    </label>
+
+                    <select class="form-select user-form-control"
+                            id="filter-status"
+                            name="status">
+
+                        <option value="">Semua</option>
+                        <option value="aktif">Aktif</option>
+                        <option value="nonaktif">Nonaktif</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-12 col-lg-2 d-flex align-items-end">
+
+                    <button type="submit"
+                            class="btn btn-primary w-100"
+                            style="min-height:42px;">
+
+                        <i class="fa-solid fa-filter me-1"></i>
+                        Filter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- Responsive Table -->
+        <div class="table-responsive">
+
+            <table class="table table-hover user-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Pengguna</th>
+                        <th>Peran</th>
+                        <th>Status</th>
+                        <th>Tanggal Dibuat</th>
+                        <th>Aksi</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- User 1 -->
+                    <tr>
+
+                        <td>
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="user-avatar">
+                                    SR
+                                </div>
+
+                                <div>
+                                    <div class="user-name">
+                                        Siti Rahma
+                                    </div>
+
+                                    <div class="user-email">
+                                        siti.rahma@polibatam.ac.id
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="user-role-badge user-role-satgas">
+                                Satgas PPKS
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="user-status-badge user-status-active">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>20 Sep 2026</td>
+
+                        <td>
+
+                            <a href="detail-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-primary"
+                               aria-label="Detail Siti Rahma">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                            <a href="form-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-secondary"
+                               aria-label="Edit Siti Rahma">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- User 2 -->
+                    <tr>
+
+                        <td>
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="user-avatar user-avatar-purple">
+                                    AN
+                                </div>
+
+                                <div>
+                                    <div class="user-name">
+                                        Admin Nur
+                                    </div>
+
+                                    <div class="user-email">
+                                        admin.nur@polibatam.ac.id
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="user-role-badge user-role-admin">
+                                Administrator
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="user-status-badge user-status-active">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>15 Sep 2026</td>
+
+                        <td>
+
+                            <a href="detail-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-primary"
+                               aria-label="Detail Admin Nur">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                            <a href="form-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-secondary"
+                               aria-label="Edit Admin Nur">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- User 3 -->
+                    <tr>
+
+                        <td>
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="user-avatar">
+                                    RN
+                                </div>
+
+                                <div>
+                                    <div class="user-name">
+                                        Raihan Nawawi
+                                    </div>
+
+                                    <div class="user-email">
+                                        raihan@example.com
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="user-role-badge user-role-reporter">
+                                Pelapor
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="user-status-badge user-status-active">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>10 Sep 2026</td>
+
+                        <td>
+
+                            <a href="detail-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-primary"
+                               aria-label="Detail Raihan Nawawi">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                            <a href="form-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-secondary"
+                               aria-label="Edit Raihan Nawawi">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- User 4 -->
+                    <tr>
+
+                        <td>
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="user-avatar user-avatar-green">
+                                    MF
+                                </div>
+
+                                <div>
+                                    <div class="user-name">
+                                        Muhammad Farhan
+                                    </div>
+
+                                    <div class="user-email">
+                                        farhan@example.com
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="user-role-badge user-role-reporter">
+                                Pelapor
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="user-status-badge user-status-inactive">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                Nonaktif
+                            </span>
+                        </td>
+
+                        <td>05 Sep 2026</td>
+
+                        <td>
+
+                            <a href="detail-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-primary"
+                               aria-label="Detail Muhammad Farhan">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                            <a href="form-pengguna-admin.html"
+                               class="btn btn-sm btn-outline-secondary"
+                               aria-label="Edit Muhammad Farhan">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-3"
+             aria-label="Navigasi daftar pengguna">
+
+            <ul class="pagination pagination-sm justify-content-end mb-0">
+
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Sebelumnya">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                </li>
+
+                <li class="page-item active">
+                    <a class="page-link" href="#" aria-current="page">1</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Berikutnya">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </section>
+
+</main>
+
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="user-container user-detail-page">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Admin">
+        <a class="role-nav-link" href="dashboard-admin.html">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link active" href="pengguna-admin.html" aria-current="page">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            Manajemen Pengguna
+        </a>
+    </nav>
+
+    <!-- Heading -->
+    <section class="mb-4">
+
+        <a href="pengguna-admin.html"
+           class="small text-secondary text-decoration-none
+                  d-inline-block mb-3">
+
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Kembali ke Daftar Pengguna
+
+        </a>
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between align-items-md-center gap-3">
+
+            <div>
+
+                <h1 class="user-title">
+                    Detail Pengguna
+                </h1>
+
+                <p class="user-description mb-0">
+                    Informasi akun dan hak akses pengguna RuangAman.
+                </p>
+
+            </div>
+
+            <a href="form-pengguna-admin.html"
+               class="btn btn-primary">
+
+                <i class="fa-solid fa-pen me-2"></i>
+                Edit Pengguna
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <div class="row g-3 user-detail-layout">
+
+        <!-- Profile -->
+        <div class="col-12 col-lg-4">
+
+            <section class="user-card user-profile-card text-center mb-3">
+
+                <div class="user-avatar user-detail-avatar mx-auto mb-2">
+
+                    SR
+
+                </div>
+
+                <h2 class="fs-5 fw-bold mb-1">
+                    Siti Rahma
+                </h2>
+
+                <p class="user-muted user-profile-email mb-2">
+                    siti.rahma@polibatam.ac.id
+                </p>
+
+                <span class="user-role-badge user-role-satgas">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Satgas PPKS
+                </span>
+
+                <div class="mt-2">
+
+                    <span class="user-status-badge user-status-active">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Akun Aktif
+                    </span>
+
+                </div>
+
+                <hr class="my-3">
+
+                <div class="user-profile-meta">
+
+                    <div class="user-profile-meta-item">
+                        <div class="user-muted">ID Pengguna</div>
+                        <div class="fw-semibold small">USR-00021</div>
+                    </div>
+
+                    <div class="user-profile-meta-item">
+                        <div class="user-muted">NIP / Identitas</div>
+                        <div class="fw-semibold small">1987654321</div>
+                    </div>
+
+                    <div class="user-profile-meta-item user-profile-meta-wide">
+                        <div class="user-muted">Bergabung Sejak</div>
+                        <div class="fw-semibold small">20 September 2026</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Account Actions -->
+            <section class="user-card user-account-actions">
+
+                <h2 class="user-card-title">
+                    Tindakan Akun
+                </h2>
+
+                <div class="d-grid gap-2">
+
+                    <button type="button"
+                            class="btn btn-outline-danger"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalNonaktifkan">
+
+                        <i class="fa-solid fa-user-slash me-2"></i>
+                        Nonaktifkan Akun
+
+                    </button>
+
+                </div>
+
+                <p class="user-form-help mt-2 mb-0">
+                    Nonaktifkan akun sesuai prosedur pengelolaan akses.
+                </p>
+
+            </section>
+
+        </div>
+
+        <!-- Information & Permissions -->
+        <div class="col-12 col-lg-8">
+
+            <!-- User Information -->
+            <section class="user-card user-information-card mb-3">
+
+                <h2 class="user-card-title">
+                    Informasi Pengguna
+                </h2>
+
+                <div class="row g-3">
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="user-muted mb-1">
+                            Nama Lengkap
+                        </div>
+
+                        <div class="fw-semibold small">
+                            Siti Rahma
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="user-muted mb-1">
+                            Email
+                        </div>
+
+                        <div class="fw-semibold small"
+                             style="overflow-wrap:anywhere;">
+
+                            siti.rahma@polibatam.ac.id
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="user-muted mb-1">
+                            Peran
+                        </div>
+
+                        <div class="fw-semibold small">
+                            Satgas PPKS
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="user-muted mb-1">
+                            Status Akun
+                        </div>
+
+                        <div>
+                            <span class="user-status-badge user-status-active">
+                                Aktif
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Permissions -->
+            <section class="user-card user-permissions-card mb-3">
+
+                <h2 class="user-card-title">
+                    Ringkasan Hak Akses
+                </h2>
+
+                <p class="user-muted user-permissions-intro mb-2">
+                    Hak akses yang diasosiasikan dengan peran Satgas PPKS.
+                </p>
+
+                <div class="user-permission">
+
+                    <div class="user-permission-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="user-permission-title">
+                            Melihat Laporan
+                        </div>
+
+                        <div class="user-permission-description">
+                            Mengakses laporan yang ditugaskan kepada Satgas.
+                        </div>
+
+                    </div>
+
+                    <span class="user-status-badge user-status-active">
+                        Diizinkan
+                    </span>
+
+                </div>
+
+                <div class="user-permission">
+
+                    <div class="user-permission-icon">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="user-permission-title">
+                            Verifikasi Laporan
+                        </div>
+
+                        <div class="user-permission-description">
+                            Memeriksa kelengkapan informasi dan bukti.
+                        </div>
+
+                    </div>
+
+                    <span class="user-status-badge user-status-active">
+                        Diizinkan
+                    </span>
+
+                </div>
+
+                <div class="user-permission">
+
+                    <div class="user-permission-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="user-permission-title">
+                            Chat & Tindak Lanjut
+                        </div>
+
+                        <div class="user-permission-description">
+                            Berkomunikasi dengan pelapor untuk kebutuhan
+                            tindak lanjut laporan.
+                        </div>
+
+                    </div>
+
+                    <span class="user-status-badge user-status-active">
+                        Diizinkan
+                    </span>
+
+                </div>
+
+                <div class="user-permission">
+
+                    <div class="user-permission-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+
+                        <div class="user-permission-title">
+                            Rekapitulasi & Statistik
+                        </div>
+
+                        <div class="user-permission-description">
+                            Melihat statistik laporan sesuai cakupan
+                            kewenangan Satgas.
+                        </div>
+
+                    </div>
+
+                    <span class="user-status-badge user-status-active">
+                        Diizinkan
+                    </span>
+
+                </div>
+
+                <div class="user-info mt-4">
+
+                    <i class="fa-solid fa-circle-info mt-1"></i>
+
+                    <div>
+                        <strong>Informasi Hak Akses</strong>
+
+                        <div class="mt-1">
+                            Ringkasan ini merupakan representasi hak akses
+                            berdasarkan peran. Penerapan akses sebenarnya
+                            harus divalidasi oleh backend pada setiap
+                            permintaan ke sistem.
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Activity -->
+            <section class="user-card user-activity-card">
+
+                <h2 class="user-card-title">
+                    Aktivitas Akun
+                </h2>
+
+                <div class="user-permission">
+
+                    <div class="user-stat-icon user-activity-icon bg-success-subtle text-success">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                    </div>
+
+                    <div>
+
+                        <div class="user-permission-title">
+                            Login Terakhir
+                        </div>
+
+                        <div class="user-permission-description">
+                            28 September 2026, 14.20 WIB
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="user-permission">
+
+                    <div class="user-stat-icon user-activity-icon bg-primary-subtle text-primary">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <div class="user-permission-title">
+                            Akun Dibuat
+                        </div>
+
+                        <div class="user-permission-description">
+                            20 September 2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Modal Konfirmasi Nonaktifkan Akun -->
+<div class="modal fade"
+     id="modalNonaktifkan"
+     tabindex="-1"
+     aria-labelledby="modalNonaktifkanLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 class="modal-title fs-5"
+                    id="modalNonaktifkanLabel">
+
+                    Nonaktifkan Akun?
+
+                </h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Tutup"></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p class="mb-0">
+                    Apakah Anda yakin ingin menonaktifkan akun
+                    <strong>Siti Rahma</strong>?
+                </p>
+
+                <p class="text-secondary small mt-2 mb-0">
+                    Pengguna seharusnya tidak dapat mengakses sistem
+                    setelah penonaktifan berhasil diterapkan.
+                </p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">
+
+                    Batal
+
+                </button>
+
+                <button type="button"
+                        class="btn btn-danger"
+                        data-bs-dismiss="modal">
+
+                    <i class="fa-solid fa-user-slash me-2"></i>
+                    Nonaktifkan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

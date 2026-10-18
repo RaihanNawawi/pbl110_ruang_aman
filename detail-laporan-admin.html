@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="main-container case-detail-page">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Admin">
+        <a class="role-nav-link" href="dashboard-admin.html">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link" href="pengguna-admin.html">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            Manajemen Pengguna
+        </a>
+    </nav>
+
+    <!-- Heading -->
+    <section class="mb-4">
+
+        <a href="dashboard-admin.html"
+           class="small text-secondary d-inline-block mb-3">
+
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Kembali ke Dashboard
+
+        </a>
+
+        <h1 class="case-page-title">Detail Laporan</h1>
+
+        <p class="case-description">
+            Periksa informasi laporan dan tentukan petugas
+            yang bertanggung jawab atas penanganannya.
+        </p>
+
+    </section>
+
+    <!-- Informasi Tiket -->
+    <section class="case-card mb-4">
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between gap-3">
+
+            <div>
+
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+
+                    <span class="fs-5 fw-bold">
+                        RA-20260928-7F3K9
+                    </span>
+
+                    <span class="case-status case-status-new">
+                        Laporan Baru
+                    </span>
+
+                </div>
+
+                <div class="case-muted">
+                    Dikirim pada 28 September 2026, 10.24
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="case-muted mb-2">
+                    Tingkat Kekhawatiran
+                </div>
+
+                <span class="case-status bg-warning-subtle text-warning fs-6">
+                    4 / 5
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="row g-4 align-items-start">
+
+        <!-- Detail Utama -->
+        <div class="col-12 col-lg-7">
+
+            <section class="case-card case-information-card mb-4">
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#informasi">
+                            Informasi
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bukti">
+                            Bukti
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#riwayat">
+                            Riwayat
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catatan">
+                            Catatan
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div id="informasi">
+
+                    <h2 class="case-card-title">
+                        Detail Kejadian
+                    </h2>
+
+                    <div class="case-detail-row">
+                        <span class="case-detail-label">Kategori Kasus</span>
+                        <span class="case-detail-value">Verbal</span>
+                    </div>
+
+                    <div class="case-detail-row">
+                        <span class="case-detail-label">Tanggal Kejadian</span>
+                        <span class="case-detail-value">28 September 2026</span>
+                    </div>
+
+                    <div class="case-detail-row">
+                        <span class="case-detail-label">Lokasi Kejadian</span>
+                        <span class="case-detail-value">Ruang Kelas</span>
+                    </div>
+
+                    <div class="case-detail-row">
+                        <span class="case-detail-label">Kategori Pelaku</span>
+                        <span class="case-detail-value">Mahasiswa</span>
+                    </div>
+
+                    <div class="mt-4">
+
+                        <h3 class="case-card-title">
+                            Kronologi Kejadian
+                        </h3>
+
+                        <p class="case-muted" id="kronologi">
+                            Pelapor menjelaskan bahwa dirinya mengalami
+                            perilaku verbal yang membuatnya merasa tidak
+                            nyaman ketika berada di lingkungan kampus.
+                        </p>
+
+                        <a href="#kronologi"
+                           class="small text-primary">
+                            Lihat kronologi lengkap
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="case-card mb-4" id="bukti">
+                <h2 class="case-card-title">Bukti Pendukung</h2>
+                <div class="d-flex align-items-start gap-3">
+                    <i class="fa-regular fa-folder-open text-secondary mt-1"
+                       aria-hidden="true"></i>
+                    <p class="case-muted mb-0">
+                        Belum ada bukti pendukung yang dilampirkan pada laporan ini.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Riwayat -->
+            <section class="case-card case-history-card" id="riwayat">
+
+                <h2 class="case-card-title">
+                    Riwayat Penanganan
+                </h2>
+
+                <div class="case-timeline-item">
+
+                    <div class="case-timeline-marker">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="case-timeline-title">Laporan Diterima</h3>
+
+                        <p class="case-timeline-text">
+                            28 September 2026, 10.24
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="case-timeline-item">
+
+                    <div class="case-timeline-marker">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="case-timeline-title">Menunggu Penugasan</h3>
+
+                        <p class="case-timeline-text">
+                            Laporan menunggu penetapan petugas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Panel Penugasan -->
+        <div class="col-12 col-lg-5 case-assignment-column">
+
+            <section class="case-card case-assignment-card">
+
+                <h2 class="case-card-title">
+                    Kelola Penugasan
+                </h2>
+
+                <p class="case-muted mb-4">
+                    Pilih petugas dan tentukan prioritas penanganan.
+                </p>
+
+                <form action="dashboard-admin.html" method="get">
+
+                    <div class="mb-4">
+
+                        <label for="satgas" class="form-label case-form-label">
+                            Pilih Satgas
+                            <span class="text-danger">*</span>
+                        </label>
+
+                        <select
+                            class="form-select case-form-control"
+                            id="satgas"
+                            name="satgas"
+                            required
+                        >
+
+                            <option value="">Pilih petugas</option>
+
+                            <option value="satgas-1">
+                                Siti Rahma
+                            </option>
+
+                            <option value="satgas-2">
+                                Ahmad Fauzi
+                            </option>
+
+                            <option value="satgas-3">
+                                Dewi Putri
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label case-form-label">
+                            Prioritas Penanganan
+                        </label>
+
+                        <div class="case-priority-grid">
+
+                            <label class="case-priority-option">
+                                <input
+                                    type="radio"
+                                    name="prioritas"
+                                    value="rendah"
+                                    class="form-check-input"
+                                >
+                                <span>Rendah</span>
+                            </label>
+
+                            <label class="case-priority-option">
+                                <input
+                                    type="radio"
+                                    name="prioritas"
+                                    value="sedang"
+                                    class="form-check-input"
+                                >
+                                <span>Sedang</span>
+                            </label>
+
+                            <label class="case-priority-option">
+                                <input
+                                    type="radio"
+                                    name="prioritas"
+                                    value="tinggi"
+                                    class="form-check-input"
+                                    checked
+                                >
+                                <span>Tinggi</span>
+                            </label>
+
+                            <label class="case-priority-option">
+                                <input
+                                    type="radio"
+                                    name="prioritas"
+                                    value="darurat"
+                                    class="form-check-input"
+                                >
+                                <span>Darurat</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label for="catatan"
+                               class="form-label case-form-label">
+                            Catatan Penugasan
+                        </label>
+
+                        <textarea
+                            class="form-control case-form-control"
+                            id="catatan"
+                            name="catatan"
+                            maxlength="500"
+                            placeholder="Tambahkan instruksi atau catatan..."
+                        ></textarea>
+
+                        <div class="form-text">
+                            Maksimal 500 karakter.
+                        </div>
+
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary w-100 py-2">
+
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        Assign ke Satgas
+
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

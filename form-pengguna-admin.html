@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="main-container">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Admin">
+        <a class="role-nav-link" href="dashboard-admin.html">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link active" href="pengguna-admin.html" aria-current="page">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            Manajemen Pengguna
+        </a>
+    </nav>
+
+    <!-- Heading -->
+    <section class="mb-4">
+
+        <a href="pengguna-admin.html"
+           class="small text-secondary text-decoration-none
+                  d-inline-block mb-3">
+
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Kembali ke Daftar Pengguna
+
+        </a>
+
+        <h1 class="user-title">
+            Tambah Pengguna
+        </h1>
+
+        <p class="user-description mb-0">
+            Masukkan informasi akun dan tentukan peran pengguna.
+        </p>
+
+    </section>
+
+    <div class="row g-4">
+
+        <!-- Form -->
+        <div class="col-12 col-lg-8">
+
+            <section class="user-card">
+
+                <h2 class="user-card-title">
+                    Informasi Pengguna
+                </h2>
+
+                <form action="pengguna-admin.html" method="post">
+
+                    <div class="row g-3">
+
+                        <!-- Nama -->
+                        <div class="col-12">
+
+                            <label for="nama"
+                                   class="form-label user-form-label">
+
+                                Nama Lengkap
+                                <span class="text-danger">*</span>
+
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control user-form-control"
+                                id="nama"
+                                name="nama"
+                                placeholder="Masukkan nama lengkap"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-12">
+
+                            <label for="email"
+                                   class="form-label user-form-label">
+
+                                Email
+                                <span class="text-danger">*</span>
+
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control user-form-control"
+                                id="email"
+                                name="email"
+                                placeholder="nama@polibatam.ac.id"
+                                required
+                            >
+
+                            <div class="user-form-help">
+                                Gunakan alamat email yang valid dan dapat diakses.
+                            </div>
+
+                        </div>
+
+                        <!-- NIM/NIP -->
+                        <div class="col-12">
+
+                            <label for="identitas"
+                                   class="form-label user-form-label">
+
+                                NIM / NIP / Identitas Akademik
+
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control user-form-control"
+                                id="identitas"
+                                name="identitas"
+                                placeholder="Masukkan identitas akademik"
+                            >
+
+                        </div>
+
+                        <!-- Role -->
+                        <div class="col-12 col-md-6">
+
+                            <label for="role"
+                                   class="form-label user-form-label">
+
+                                Peran Pengguna
+                                <span class="text-danger">*</span>
+
+                            </label>
+
+                            <select class="form-select user-form-control"
+                                    id="role"
+                                    name="role"
+                                    required>
+
+                                <option value="">
+                                    Pilih peran
+                                </option>
+
+                                <option value="pelapor">
+                                    Pelapor
+                                </option>
+
+                                <option value="satgas">
+                                    Satgas PPKS
+                                </option>
+
+                                <option value="admin">
+                                    Administrator
+                                </option>
+
+                            </select>
+
+                            <div class="user-form-help">
+                                Peran menentukan kewenangan akses pengguna.
+                            </div>
+
+                        </div>
+
+                        <!-- Status -->
+                        <div class="col-12 col-md-6">
+
+                            <label for="status"
+                                   class="form-label user-form-label">
+
+                                Status Akun
+                                <span class="text-danger">*</span>
+
+                            </label>
+
+                            <select class="form-select user-form-control"
+                                    id="status"
+                                    name="status"
+                                    required>
+
+                                <option value="aktif">
+                                    Aktif
+                                </option>
+
+                                <option value="nonaktif">
+                                    Nonaktif
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="col-12">
+
+                            <label for="catatan"
+                                   class="form-label user-form-label">
+
+                                Catatan Administrator
+
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                id="catatan"
+                                name="catatan"
+                                rows="3"
+                                maxlength="500"
+                                placeholder="Catatan tambahan jika diperlukan..."
+                                style="font-size:13px;"
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="d-flex flex-column flex-sm-row
+                                justify-content-end gap-2">
+
+                        <a href="pengguna-admin.html"
+                           class="btn btn-outline-secondary">
+
+                            Batal
+
+                        </a>
+
+                        <button type="submit"
+                                class="btn btn-primary">
+
+                            <i class="fa-solid fa-floppy-disk me-2"></i>
+                            Simpan Pengguna
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+        <!-- Role Information -->
+        <div class="col-12 col-lg-4">
+
+            <section class="user-card mb-4">
+
+                <h2 class="user-card-title">
+                    Panduan Peran
+                </h2>
+
+                <div class="user-permission">
+
+                    <div class="user-stat-icon bg-primary-subtle text-primary"
+                         style="width:36px;height:36px;font-size:15px;">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <div class="user-permission-title">
+                            Pelapor
+                        </div>
+
+                        <div class="user-permission-description">
+                            Mengirim laporan, memantau status,
+                            dan berkomunikasi dengan Satgas.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="user-permission">
+
+                    <div class="user-stat-icon bg-success-subtle text-success"
+                         style="width:36px;height:36px;font-size:15px;">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <div class="user-permission-title">
+                            Satgas PPKS
+                        </div>
+
+                        <div class="user-permission-description">
+                            Memverifikasi laporan dan melakukan
+                            tindak lanjut sesuai kewenangannya.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="user-permission">
+
+                    <div class="user-stat-icon bg-purple-subtle text-primary"
+                         style="width:36px;height:36px;font-size:15px;background:#ede9fe;">
+
+                        <i class="fa-solid fa-user-gear"></i>
+
+                    </div>
+
+                    <div>
+
+                        <div class="user-permission-title">
+                            Administrator
+                        </div>
+
+                        <div class="user-permission-description">
+                            Mengelola akun, konfigurasi sistem,
+                            dan hak akses administratif.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

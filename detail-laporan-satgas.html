@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="verification-container verification-detail-page">
+
+    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
+        <a class="role-nav-link" href="dashboard-satgas.html">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a class="role-nav-link" href="chat-list.html">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            Chat & Tindak Lanjut
+        </a>
+        <a class="role-nav-link" href="statistik-satgas.html">
+            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+            Rekapitulasi
+        </a>
+    </nav>
+
+    <!-- Header Halaman -->
+    <section class="mb-4">
+
+        <a href="dashboard-satgas.html"
+           class="small text-secondary text-decoration-none d-inline-block mb-3">
+
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Kembali ke Dashboard
+
+        </a>
+
+        <h1 class="verification-title">
+            Detail Laporan
+        </h1>
+
+        <p class="verification-description mb-0">
+            Periksa informasi laporan dan bukti pendukung sebelum
+            menentukan tindakan penanganan.
+        </p>
+
+    </section>
+
+    <!-- Informasi Tiket -->
+    <section class="verification-card mb-4">
+
+        <div class="d-flex flex-column flex-md-row
+                    justify-content-between gap-3">
+
+            <div>
+
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+
+                    <i class="fa-solid fa-file-lines text-primary fs-4"></i>
+
+                    <h2 class="fs-5 fw-bold mb-0">
+                        RA-20260928-7F3K9
+                    </h2>
+
+                    <span class="verification-status verification-status-pending">
+                        Dalam Verifikasi
+                    </span>
+
+                </div>
+
+                <p class="verification-description mb-0">
+                    Dikirim pada 28 September 2026, pukul 10.24
+                </p>
+
+            </div>
+
+            <div>
+
+                <div class="verification-label mb-2">
+                    Tingkat Kekhawatiran
+                </div>
+
+                <span class="verification-status text-white"
+                      style="background:#f97316; font-size:14px;">
+
+                    4 / 5
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="row g-4 align-items-start verification-detail-layout">
+
+        <!-- Informasi Laporan -->
+        <div class="col-12 col-lg-7">
+
+            <section class="verification-card verification-report-card mb-4">
+
+                <h2 class="verification-card-title">
+                    Informasi Laporan
+                </h2>
+
+                <div class="verification-row">
+                    <span class="verification-label">Kategori Kasus</span>
+                    <span class="verification-value">Verbal</span>
+                </div>
+
+                <div class="verification-row">
+                    <span class="verification-label">Tanggal Kejadian</span>
+                    <span class="verification-value">28 September 2026</span>
+                </div>
+
+                <div class="verification-row">
+                    <span class="verification-label">Lokasi Kejadian</span>
+                    <span class="verification-value">Ruang Kelas B, Gedung A</span>
+                </div>
+
+                <div class="verification-row">
+                    <span class="verification-label">Kategori Pelapor</span>
+                    <span class="verification-value">Mahasiswa</span>
+                </div>
+
+                <div class="verification-row">
+                    <span class="verification-label">Kategori Pelaku</span>
+                    <span class="verification-value">Mahasiswa</span>
+                </div>
+
+                <div class="mt-4">
+
+                    <h3 class="verification-card-title">
+                        Kronologi Kejadian
+                    </h3>
+
+                    <p class="verification-description mb-0">
+                        Saya mendapatkan komentar yang tidak pantas
+                        dari teman sekelas saat kegiatan perkuliahan
+                        berlangsung. Kejadian tersebut membuat saya
+                        merasa tidak nyaman.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- Lampiran -->
+            <section class="verification-card verification-evidence-card">
+
+                <h2 class="verification-card-title">
+                    Bukti Pendukung
+                </h2>
+
+                <p class="verification-description">
+                    Berkas yang dilampirkan oleh pelapor.
+                </p>
+
+                <div class="d-flex flex-column gap-3">
+
+                    <div class="verification-attachment">
+
+                        <div class="verification-attachment-icon">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+
+                        <div class="flex-grow-1">
+
+                            <div class="verification-attachment-name">
+                                bukti-foto.jpg
+                            </div>
+
+                            <div class="verification-attachment-meta">
+                                JPG · 1.2 MB
+                            </div>
+
+                        </div>
+
+                        <button type="button"
+                                class="btn btn-outline-primary btn-sm"
+                                aria-label="Lihat bukti foto"
+                                onclick="alert('Pratinjau bukti memerlukan file asli.')">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="verification-attachment">
+
+                        <div class="verification-attachment-icon">
+                            <i class="fa-regular fa-file-pdf"></i>
+                        </div>
+
+                        <div class="flex-grow-1">
+
+                            <div class="verification-attachment-name">
+                                bukti-percakapan.pdf
+                            </div>
+
+                            <div class="verification-attachment-meta">
+                                PDF · 856 KB
+                            </div>
+
+                        </div>
+
+                        <button type="button"
+                                class="btn btn-outline-primary btn-sm"
+                                aria-label="Lihat bukti PDF"
+                                onclick="alert('Pratinjau bukti memerlukan file asli.')">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Panel Verifikasi -->
+        <div class="col-12 col-lg-5 verification-action-column">
+
+            <section class="verification-card verification-action-card">
+
+                <h2 class="verification-card-title">
+                    Tindakan Satgas
+                </h2>
+
+                <p class="verification-description">
+                    Pastikan informasi dan bukti telah diperiksa
+                    sebelum melanjutkan proses.
+                </p>
+
+                <div class="verification-info mb-4">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <strong>Jaga Kerahasiaan</strong>
+
+                        <div class="mt-1">
+                            Informasi laporan hanya boleh digunakan
+                            untuk proses verifikasi dan penanganan.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-grid gap-2 verification-actions">
+
+                    <a href="verifikasi-laporan-satgas.html"
+                       class="btn btn-primary verification-button">
+
+                        <i class="fa-solid fa-clipboard-check me-2"></i>
+                        Mulai Verifikasi
+
+                    </a>
+
+                    <a href="dashboard-satgas.html"
+                       class="btn btn-outline-secondary verification-button">
+
+                        Kembali ke Daftar Laporan
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <script
+    type="module"
+    src="assets/js/layout.js"
+  ></script>
+</head>
+
+<body>
+  <!-- Navbar reusable -->
+  <div id="app-navbar"></div>
+
+  <!-- Main Content -->
+<main class="login-container">
+
+    <section class="login-card">
+
+        <div class="text-center">
+
+            <div class="login-icon">
+                <i class="fa-solid fa-envelope-circle-check"></i>
+            </div>
+
+            <h1 class="login-title">
+                Periksa Email Anda
+            </h1>
+
+            <p class="login-description">
+                Jika alamat email valid, petunjuk untuk mengakses
+                akun Anda akan dikirimkan melalui email.
+            </p>
+
+            <div class="email-address" id="email-display">
+                Email yang Anda masukkan
+            </div>
+
+        </div>
+
+        <div class="login-steps">
+
+            <h2 class="fw-bold fs-6 mb-3">
+                Langkah selanjutnya:
+            </h2>
+
+            <div class="login-step">
+
+                <div class="login-step-number">1</div>
+
+                <div class="login-step-text">
+                    Buka email Anda.
+                </div>
+
+            </div>
+
+            <div class="login-step">
+
+                <div class="login-step-number">2</div>
+
+                <div class="login-step-text">
+                    Klik tautan masuk yang dikirimkan oleh RuangAman.
+                </div>
+
+            </div>
+
+            <div class="login-step">
+
+                <div class="login-step-number">3</div>
+
+                <div class="login-step-text">
+                    Anda akan diarahkan ke halaman laporan Anda.
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            class="btn btn-outline-primary w-100 py-2"
+            onclick="alert('Fitur kirim ulang memerlukan integrasi backend.')"
+        >
+
+            <i class="fa-solid fa-rotate-right me-2"></i>
+            Kirim Ulang Link
+
+        </button>
+
+        <p class="login-description mt-3 mb-0" style="font-size: 11px;">
+            Tautan akses berlaku selama 15 menit.
+            Periksa folder spam jika email belum diterima.
+        </p>
+
+        <div class="text-center mt-4">
+
+            <a href="login-pelapor.html" class="small text-secondary">
+                <i class="fa-solid fa-arrow-left me-1"></i>
+                Kembali
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+
+    if (email) {
+        document.getElementById('email-display').textContent = email;
+    }
+</script>
+
+  <!-- Footer reusable -->
+  <div id="app-footer"></div>
+</body>
+</html>
