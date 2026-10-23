@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Satgas - RuangAman</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script
     type="module"
@@ -10,127 +16,111 @@
   ></script>
 </head>
 
-<body>
+<body class="bg-light">
+
   <!-- Navbar reusable -->
   <div id="app-navbar"></div>
 
   <!-- Main Content -->
-<main class="main-container">
+  <main class="container py-4">
 
-    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
-        <a class="role-nav-link active" href="dashboard-satgas.html" aria-current="page">
-            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+    <!-- Role Navigation -->
+    <nav class="nav nav-pills gap-2 mb-4" aria-label="Navigasi Satgas PPKS">
+        <a class="nav-link active shadow-sm" href="dashboard-satgas.html" aria-current="page">
+            <i class="fa-solid fa-gauge-high me-1" aria-hidden="true"></i>
             Dashboard
         </a>
-        <a class="role-nav-link" href="chat-list.html">
-            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+        <a class="nav-link text-secondary bg-white shadow-sm" href="chat-list.html">
+            <i class="fa-solid fa-comments me-1" aria-hidden="true"></i>
             Chat & Tindak Lanjut
         </a>
-        <a class="role-nav-link" href="statistik-satgas.html">
-            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+        <a class="nav-link text-secondary bg-white shadow-sm" href="statistik-satgas.html">
+            <i class="fa-solid fa-chart-column me-1" aria-hidden="true"></i>
             Rekapitulasi
         </a>
     </nav>
 
     <!-- Heading -->
     <section class="mb-4">
-
-        <h1 class="case-page-title">
+        <h1 class="h3 fw-bold text-dark mb-1">
             Dashboard Satgas
         </h1>
-
-        <p class="case-description mb-0">
-            Pantau laporan yang ditugaskan kepada Anda dan
-            lanjutkan proses penanganannya.
+        <p class="text-muted mb-0">
+            Pantau laporan yang ditugaskan kepada Anda dan lanjutkan proses penanganannya.
         </p>
-
     </section>
 
     <!-- Statistik Satgas -->
     <section class="row g-3 mb-4">
 
+        <!-- Ditugaskan -->
         <div class="col-6 col-lg-4">
-
-            <div class="case-stat">
-
-                <div class="case-stat-icon bg-primary-subtle text-primary">
-                    <i class="fa-solid fa-inbox"></i>
+            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center fs-5" style="width: 48px; height: 48px; min-width: 48px;">
+                        <i class="fa-solid fa-inbox"></i>
+                    </div>
+                    <div>
+                        <div class="fs-4 fw-bold text-dark lh-1">8</div>
+                        <div class="text-muted small mt-1">Ditugaskan</div>
+                    </div>
                 </div>
-
-                <div>
-                    <div class="case-stat-number">8</div>
-                    <div class="case-stat-label">Ditugaskan</div>
-                </div>
-
             </div>
-
         </div>
 
+        <!-- Dalam Proses -->
         <div class="col-6 col-lg-4">
-
-            <div class="case-stat">
-
-                <div class="case-stat-icon bg-warning-subtle text-warning">
-                    <i class="fa-solid fa-spinner"></i>
+            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-warning-subtle text-warning-emphasis rounded-circle d-flex align-items-center justify-content-center fs-5" style="width: 48px; height: 48px; min-width: 48px;">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+                    <div>
+                        <div class="fs-4 fw-bold text-dark lh-1">5</div>
+                        <div class="text-muted small mt-1">Dalam Proses</div>
+                    </div>
                 </div>
-
-                <div>
-                    <div class="case-stat-number">5</div>
-                    <div class="case-stat-label">Dalam Proses</div>
-                </div>
-
             </div>
-
         </div>
 
+        <!-- Selesai Ditangani -->
         <div class="col-12 col-lg-4">
-
-            <div class="case-stat">
-
-                <div class="case-stat-icon bg-success-subtle text-success">
-                    <i class="fa-solid fa-circle-check"></i>
+            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center fs-5" style="width: 48px; height: 48px; min-width: 48px;">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div>
+                        <div class="fs-4 fw-bold text-dark lh-1">12</div>
+                        <div class="text-muted small mt-1">Selesai Ditangani</div>
+                    </div>
                 </div>
-
-                <div>
-                    <div class="case-stat-number">12</div>
-                    <div class="case-stat-label">Selesai Ditangani</div>
-                </div>
-
             </div>
-
         </div>
 
     </section>
 
     <!-- Filter -->
-    <section class="case-card mb-4">
-
-        <div class="d-flex flex-column flex-md-row
-                    justify-content-between gap-3">
-
+    <section class="card border-0 shadow-sm rounded-4 p-3 p-md-4 mb-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
             <div>
-
-                <h2 class="case-card-title mb-1">
+                <h2 class="fs-5 fw-bold text-dark mb-1">
                     Laporan Saya
                 </h2>
-
-                <p class="case-muted mb-0">
+                <p class="text-muted small mb-0">
                     Daftar laporan yang menjadi tanggung jawab Anda.
                 </p>
-
             </div>
 
             <div class="d-flex flex-column flex-sm-row gap-2">
-
                 <input
                     type="search"
-                    class="form-control case-form-control"
+                    class="form-control bg-light border-0 shadow-none"
                     placeholder="Cari nomor tiket..."
                     aria-label="Cari nomor tiket"
                 >
-
                 <select
-                    class="form-select case-form-control"
+                    class="form-select bg-light border-0 shadow-none"
                     aria-label="Filter status"
                 >
                     <option value="">Semua Status</option>
@@ -139,130 +129,88 @@
                     <option value="waiting">Menunggu Informasi</option>
                     <option value="completed">Selesai</option>
                 </select>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- Daftar Kasus -->
     <section class="d-flex flex-column gap-3">
 
         <!-- Kasus 1 -->
-        <a href="detail-laporan-satgas.html" class="case-list-item">
-
-            <div class="d-flex justify-content-between
-                        align-items-start gap-3">
-
+        <a href="detail-laporan-satgas.html" class="card border-0 shadow-sm rounded-4 p-3 p-md-4 text-decoration-none card-hover">
+            <div class="d-flex justify-content-between align-items-start gap-3">
                 <div class="flex-grow-1">
-
-                    <h2 class="case-list-title">
+                    <h2 class="h6 font-monospace fw-bold text-primary mb-1">
                         RA-20260928-7F3K9
                     </h2>
-
-                    <div class="case-list-meta">
+                    <div class="text-muted small">
                         Verbal · 28 September 2026 · Ruang Kelas
                     </div>
-
                 </div>
-
-                <span class="case-status case-status-progress">
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
                     Dalam Penanganan
                 </span>
-
             </div>
 
-            <div class="d-flex justify-content-between
-                        align-items-center mt-3">
-
-                <span class="case-list-meta">
-                    Tingkat Kekhawatiran: 4 / 5
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                <span class="text-muted small">
+                    Tingkat Kekhawatiran: <strong class="text-dark">4 / 5</strong>
                 </span>
-
-                <i class="fa-solid fa-chevron-right text-secondary"></i>
-
+                <i class="fa-solid fa-chevron-right text-secondary small"></i>
             </div>
-
         </a>
 
         <!-- Kasus 2 -->
-        <a href="detail-laporan-satgas.html" class="case-list-item">
-
-            <div class="d-flex justify-content-between
-                        align-items-start gap-3">
-
+        <a href="detail-laporan-satgas.html" class="card border-0 shadow-sm rounded-4 p-3 p-md-4 text-decoration-none card-hover">
+            <div class="d-flex justify-content-between align-items-start gap-3">
                 <div class="flex-grow-1">
-
-                    <h2 class="case-list-title">
+                    <h2 class="h6 font-monospace fw-bold text-primary mb-1">
                         RA-20260927-9Q2M4
                     </h2>
-
-                    <div class="case-list-meta">
+                    <div class="text-muted small">
                         Nonverbal · 27 September 2026 · Kantin
                     </div>
-
                 </div>
-
-                <span class="case-status case-status-waiting">
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2 rounded-pill">
                     Menunggu Informasi
                 </span>
-
             </div>
 
-            <div class="d-flex justify-content-between
-                        align-items-center mt-3">
-
-                <span class="case-list-meta">
-                    Tingkat Kekhawatiran: 3 / 5
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                <span class="text-muted small">
+                    Tingkat Kekhawatiran: <strong class="text-dark">3 / 5</strong>
                 </span>
-
-                <i class="fa-solid fa-chevron-right text-secondary"></i>
-
+                <i class="fa-solid fa-chevron-right text-secondary small"></i>
             </div>
-
         </a>
 
         <!-- Kasus 3 -->
-        <a href="detail-laporan-satgas.html" class="case-list-item">
-
-            <div class="d-flex justify-content-between
-                        align-items-start gap-3">
-
+        <a href="detail-laporan-satgas.html" class="card border-0 shadow-sm rounded-4 p-3 p-md-4 text-decoration-none card-hover">
+            <div class="d-flex justify-content-between align-items-start gap-3">
                 <div class="flex-grow-1">
-
-                    <h2 class="case-list-title">
+                    <h2 class="h6 font-monospace fw-bold text-primary mb-1">
                         RA-20260926-1A8Q7
                     </h2>
-
-                    <div class="case-list-meta">
+                    <div class="text-muted small">
                         Cyberbullying · 26 September 2026 · Online
                     </div>
-
                 </div>
-
-                <span class="case-status case-status-progress">
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
                     Dalam Penanganan
                 </span>
-
             </div>
 
-            <div class="d-flex justify-content-between
-                        align-items-center mt-3">
-
-                <span class="case-list-meta">
-                    Tingkat Kekhawatiran: 5 / 5
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                <span class="text-muted small">
+                    Tingkat Kekhawatiran: <strong class="text-dark">5 / 5</strong>
                 </span>
-
-                <i class="fa-solid fa-chevron-right text-secondary"></i>
-
+                <i class="fa-solid fa-chevron-right text-secondary small"></i>
             </div>
-
         </a>
 
     </section>
 
-</main>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>

@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail & Verifikasi Laporan - Satgas PPKS</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script
     type="module"
@@ -10,282 +16,224 @@
   ></script>
 </head>
 
-<body>
+<body class="bg-light">
+
   <!-- Navbar reusable -->
   <div id="app-navbar"></div>
 
   <!-- Main Content -->
-<main class="verification-container verification-detail-page">
+  <main class="container py-4">
 
-    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
-        <a class="role-nav-link" href="dashboard-satgas.html">
-            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+    <!-- Role Navigation -->
+    <nav class="nav nav-pills gap-2 mb-4" aria-label="Navigasi Satgas PPKS">
+        <a class="nav-link text-secondary bg-white shadow-sm" href="dashboard-satgas.html">
+            <i class="fa-solid fa-gauge-high me-1" aria-hidden="true"></i>
             Dashboard
         </a>
-        <a class="role-nav-link" href="chat-list.html">
-            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+        <a class="nav-link text-secondary bg-white shadow-sm" href="chat-list.html">
+            <i class="fa-solid fa-comments me-1" aria-hidden="true"></i>
             Chat & Tindak Lanjut
         </a>
-        <a class="role-nav-link" href="statistik-satgas.html">
-            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+        <a class="nav-link text-secondary bg-white shadow-sm" href="statistik-satgas.html">
+            <i class="fa-solid fa-chart-column me-1" aria-hidden="true"></i>
             Rekapitulasi
         </a>
     </nav>
 
     <!-- Header Halaman -->
     <section class="mb-4">
-
-        <a href="dashboard-satgas.html"
-           class="small text-secondary text-decoration-none d-inline-block mb-3">
-
+        <a href="dashboard-satgas.html" class="small text-secondary text-decoration-none d-inline-block mb-3">
             <i class="fa-solid fa-arrow-left me-1"></i>
             Kembali ke Dashboard
-
         </a>
 
-        <h1 class="verification-title">
+        <h1 class="h3 fw-bold text-dark mb-1">
             Detail Laporan
         </h1>
 
-        <p class="verification-description mb-0">
-            Periksa informasi laporan dan bukti pendukung sebelum
-            menentukan tindakan penanganan.
+        <p class="text-muted mb-0">
+            Periksa informasi laporan dan bukti pendukung sebelum menentukan tindakan penanganan.
         </p>
-
     </section>
 
     <!-- Informasi Tiket -->
-    <section class="verification-card mb-4">
-
-        <div class="d-flex flex-column flex-md-row
-                    justify-content-between gap-3">
-
+    <section class="card border-0 shadow-sm rounded-4 p-3 p-md-4 mb-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
             <div>
-
-                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
-
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
                     <i class="fa-solid fa-file-lines text-primary fs-4"></i>
-
-                    <h2 class="fs-5 fw-bold mb-0">
+                    <h2 class="fs-5 font-monospace fw-bold text-dark mb-0">
                         RA-20260928-7F3K9
                     </h2>
-
-                    <span class="verification-status verification-status-pending">
+                    <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2 rounded-pill">
                         Dalam Verifikasi
                     </span>
-
                 </div>
-
-                <p class="verification-description mb-0">
+                <p class="text-muted small mb-0">
                     Dikirim pada 28 September 2026, pukul 10.24
                 </p>
-
             </div>
 
             <div>
-
-                <div class="verification-label mb-2">
+                <div class="text-muted small mb-1">
                     Tingkat Kekhawatiran
                 </div>
-
-                <span class="verification-status text-white"
-                      style="background:#f97316; font-size:14px;">
-
+                <span class="badge text-white px-3 py-2 rounded-pill" style="background-color: #f97316; font-size: 14px;">
                     4 / 5
-
                 </span>
-
             </div>
-
         </div>
-
     </section>
 
-    <div class="row g-4 align-items-start verification-detail-layout">
+    <div class="row g-4 align-items-start">
 
         <!-- Informasi Laporan -->
         <div class="col-12 col-lg-7">
 
-            <section class="verification-card verification-report-card mb-4">
-
-                <h2 class="verification-card-title">
+            <section class="card border-0 shadow-sm rounded-4 p-3 p-md-4 mb-4">
+                <h2 class="fs-5 fw-bold text-dark mb-3">
                     Informasi Laporan
                 </h2>
 
-                <div class="verification-row">
-                    <span class="verification-label">Kategori Kasus</span>
-                    <span class="verification-value">Verbal</span>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted small">Kategori Kasus</span>
+                    <span class="fw-semibold small text-dark">Verbal</span>
                 </div>
 
-                <div class="verification-row">
-                    <span class="verification-label">Tanggal Kejadian</span>
-                    <span class="verification-value">28 September 2026</span>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted small">Tanggal Kejadian</span>
+                    <span class="fw-semibold small text-dark">28 September 2026</span>
                 </div>
 
-                <div class="verification-row">
-                    <span class="verification-label">Lokasi Kejadian</span>
-                    <span class="verification-value">Ruang Kelas B, Gedung A</span>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted small">Lokasi Kejadian</span>
+                    <span class="fw-semibold small text-dark">Ruang Kelas B, Gedung A</span>
                 </div>
 
-                <div class="verification-row">
-                    <span class="verification-label">Kategori Pelapor</span>
-                    <span class="verification-value">Mahasiswa</span>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted small">Kategori Pelapor</span>
+                    <span class="fw-semibold small text-dark">Mahasiswa</span>
                 </div>
 
-                <div class="verification-row">
-                    <span class="verification-label">Kategori Pelaku</span>
-                    <span class="verification-value">Mahasiswa</span>
+                <div class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted small">Kategori Pelaku</span>
+                    <span class="fw-semibold small text-dark">Mahasiswa</span>
                 </div>
 
                 <div class="mt-4">
-
-                    <h3 class="verification-card-title">
+                    <h3 class="fs-6 fw-bold text-dark mb-2">
                         Kronologi Kejadian
                     </h3>
 
-                    <p class="verification-description mb-0">
-                        Saya mendapatkan komentar yang tidak pantas
-                        dari teman sekelas saat kegiatan perkuliahan
-                        berlangsung. Kejadian tersebut membuat saya
-                        merasa tidak nyaman.
+                    <p class="text-muted small lh-base mb-0">
+                        Saya mendapatkan komentar yang tidak pantas dari teman sekelas saat kegiatan perkuliahan berlangsung. Kejadian tersebut membuat saya merasa tidak nyaman.
                     </p>
-
                 </div>
-
             </section>
 
             <!-- Lampiran -->
-            <section class="verification-card verification-evidence-card">
-
-                <h2 class="verification-card-title">
+            <section class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
+                <h2 class="fs-5 fw-bold text-dark mb-1">
                     Bukti Pendukung
                 </h2>
 
-                <p class="verification-description">
+                <p class="text-muted small mb-3">
                     Berkas yang dilampirkan oleh pelapor.
                 </p>
 
                 <div class="d-flex flex-column gap-3">
 
-                    <div class="verification-attachment">
-
-                        <div class="verification-attachment-icon">
+                    <!-- Bukti 1 -->
+                    <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border">
+                        <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center fs-5" style="width: 42px; height: 42px; min-width: 42px;">
                             <i class="fa-regular fa-image"></i>
                         </div>
 
                         <div class="flex-grow-1">
-
-                            <div class="verification-attachment-name">
+                            <div class="fw-semibold small text-dark">
                                 bukti-foto.jpg
                             </div>
-
-                            <div class="verification-attachment-meta">
+                            <div class="text-muted extra-small" style="font-size: 0.75rem;">
                                 JPG · 1.2 MB
                             </div>
-
                         </div>
 
                         <button type="button"
-                                class="btn btn-outline-primary btn-sm"
+                                class="btn btn-outline-primary btn-sm px-3"
                                 aria-label="Lihat bukti foto"
                                 onclick="alert('Pratinjau bukti memerlukan file asli.')">
-
                             <i class="fa-solid fa-eye"></i>
-
                         </button>
-
                     </div>
 
-                    <div class="verification-attachment">
-
-                        <div class="verification-attachment-icon">
+                    <!-- Bukti 2 -->
+                    <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border">
+                        <div class="bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center fs-5" style="width: 42px; height: 42px; min-width: 42px;">
                             <i class="fa-regular fa-file-pdf"></i>
                         </div>
 
                         <div class="flex-grow-1">
-
-                            <div class="verification-attachment-name">
+                            <div class="fw-semibold small text-dark">
                                 bukti-percakapan.pdf
                             </div>
-
-                            <div class="verification-attachment-meta">
+                            <div class="text-muted extra-small" style="font-size: 0.75rem;">
                                 PDF · 856 KB
                             </div>
-
                         </div>
 
                         <button type="button"
-                                class="btn btn-outline-primary btn-sm"
+                                class="btn btn-outline-primary btn-sm px-3"
                                 aria-label="Lihat bukti PDF"
                                 onclick="alert('Pratinjau bukti memerlukan file asli.')">
-
                             <i class="fa-solid fa-eye"></i>
-
                         </button>
-
                     </div>
 
                 </div>
-
             </section>
 
         </div>
 
         <!-- Panel Verifikasi -->
-        <div class="col-12 col-lg-5 verification-action-column">
+        <div class="col-12 col-lg-5">
 
-            <section class="verification-card verification-action-card">
-
-                <h2 class="verification-card-title">
+            <section class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
+                <h2 class="fs-5 fw-bold text-dark mb-1">
                     Tindakan Satgas
                 </h2>
 
-                <p class="verification-description">
-                    Pastikan informasi dan bukti telah diperiksa
-                    sebelum melanjutkan proses.
+                <p class="text-muted small mb-4">
+                    Pastikan informasi dan bukti telah diperiksa sebelum melanjutkan proses.
                 </p>
 
-                <div class="verification-info mb-4">
-
-                    <i class="fa-solid fa-shield-halved"></i>
-
-                    <div>
-                        <strong>Jaga Kerahasiaan</strong>
-
-                        <div class="mt-1">
-                            Informasi laporan hanya boleh digunakan
-                            untuk proses verifikasi dan penanganan.
+                <!-- Info Box Kerahasiaan -->
+                <div class="card border-0 bg-body-tertiary rounded-4 p-3 mb-4 d-flex flex-row gap-3">
+                    <i class="fa-solid fa-shield-halved text-secondary fs-5 mt-1"></i>
+                    <div class="small">
+                        <strong class="text-dark">Jaga Kerahasiaan</strong>
+                        <div class="mt-1 text-muted">
+                            Informasi laporan hanya boleh digunakan untuk proses verifikasi dan penanganan.
                         </div>
                     </div>
-
                 </div>
 
-                <div class="d-grid gap-2 verification-actions">
-
-                    <a href="verifikasi-laporan-satgas.html"
-                       class="btn btn-primary verification-button">
-
+                <div class="d-grid gap-2">
+                    <a href="verifikasi-laporan-satgas.html" class="btn btn-primary py-2 fw-semibold">
                         <i class="fa-solid fa-clipboard-check me-2"></i>
                         Mulai Verifikasi
-
                     </a>
 
-                    <a href="dashboard-satgas.html"
-                       class="btn btn-outline-secondary verification-button">
-
+                    <a href="dashboard-satgas.html" class="btn btn-outline-secondary py-2 fw-semibold">
                         Kembali ke Daftar Laporan
-
                     </a>
-
                 </div>
-
             </section>
 
         </div>
 
     </div>
 
-</main>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>
