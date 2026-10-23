@@ -15,171 +15,163 @@
   <div id="app-navbar"></div>
 
   <!-- Konten khusus Beranda -->
-<main class="app-container">
+  <main class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7">
 
-    <h1 class="page-title">Buat Laporan Kekerasan</h1>
+        <h1 class="h3 fw-bold mb-1">Buat Laporan Kekerasan</h1>
 
-    <p class="page-description">
-        Pastikan informasi yang akan Anda kirim sudah benar.
-    </p>
-
-    <div class="stepper">
-
-        <div class="step completed">
-            <div class="step-number"><i class="fa-solid fa-check"></i></div>
-            <div class="step-label">Data Diri</div>
-        </div>
-
-        <div class="step completed">
-            <div class="step-number"><i class="fa-solid fa-check"></i></div>
-            <div class="step-label">Detail Kejadian</div>
-        </div>
-
-        <div class="step completed">
-            <div class="step-number"><i class="fa-solid fa-check"></i></div>
-            <div class="step-label">Pelaku & Bukti</div>
-        </div>
-
-        <div class="step active">
-            <div class="step-number">4</div>
-            <div class="step-label">Konfirmasi</div>
-        </div>
-
-    </div>
-
-    <section class="form-card">
-
-        <h2 class="form-section-title">Konfirmasi Laporan</h2>
-
-        <p class="form-text mb-3">
-            Contoh pratinjau statis. Pastikan seluruh data laporan Anda sudah benar.
+        <p class="text-body-secondary mb-4">
+          Pastikan informasi yang akan Anda kirim sudah benar.
         </p>
 
-        <!-- Data Diri -->
-        <div class="summary-section">
+        <!-- Stepper -->
+        <ol class="nav nav-pills nav-fill gap-2 mb-4 small text-center">
+          <li class="nav-item">
+            <span class="nav-link h-100 bg-success-subtle text-success-emphasis">
+              <span class="d-block fw-bold"><i class="fa-solid fa-check"></i></span>
+              <span class="d-block">Data Diri</span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link h-100 bg-success-subtle text-success-emphasis">
+              <span class="d-block fw-bold"><i class="fa-solid fa-check"></i></span>
+              <span class="d-block">Detail Kejadian</span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link h-100 bg-success-subtle text-success-emphasis">
+              <span class="d-block fw-bold"><i class="fa-solid fa-check"></i></span>
+              <span class="d-block">Pelaku & Bukti</span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link h-100 active" aria-current="step">
+              <span class="d-block fw-bold">4</span>
+              <span class="d-block">Konfirmasi</span>
+            </span>
+          </li>
+        </ol>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <h3 class="summary-heading">Data Diri</h3>
+        <section class="card border-0 shadow-sm">
+          <div class="card-body p-4">
 
-                <a href="data-diri.html" class="section-link">
-                    <i class="fa-solid fa-pen me-1"></i>
-                    Ubah
+            <h2 class="h5 fw-bold mb-1">Konfirmasi Laporan</h2>
+
+            <p class="form-text mb-3">
+              Contoh pratinjau statis. Pastikan seluruh data laporan Anda sudah benar.
+            </p>
+
+            <!-- Data Diri -->
+            <div class="border-bottom pb-2 mb-3">
+
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="h6 fw-bold mb-0">Data Diri</h3>
+
+                <a href="data-diri.html" class="link-primary fw-semibold small text-decoration-none">
+                  <i class="fa-solid fa-pen me-1"></i>
+                  Ubah
                 </a>
+              </div>
+
+              <dl class="row small mb-0">
+                <dt class="col-sm-4 fw-normal text-body-secondary">Jenis Pelaporan</dt>
+                <dd class="col-sm-8 fw-semibold">Teridentifikasi</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Jenis Civitas</dt>
+                <dd class="col-sm-8 fw-semibold">Mahasiswa</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">NIM / NIP</dt>
+                <dd class="col-sm-8 fw-semibold">1234567890</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Email</dt>
+                <dd class="col-sm-8 fw-semibold">pelapor@example.com</dd>
+              </dl>
+
             </div>
 
-            <div class="summary-row">
-                <span class="summary-label">Jenis Pelaporan</span>
-                <span class="summary-value">Teridentifikasi</span>
-            </div>
+            <!-- Detail Kejadian -->
+            <div class="border-bottom pb-2 mb-3">
 
-            <div class="summary-row">
-                <span class="summary-label">Jenis Civitas</span>
-                <span class="summary-value">Mahasiswa</span>
-            </div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="h6 fw-bold mb-0">Detail Kejadian</h3>
 
-            <div class="summary-row">
-                <span class="summary-label">NIM / NIP</span>
-                <span class="summary-value">1234567890</span>
-            </div>
-
-            <div class="summary-row">
-                <span class="summary-label">Email</span>
-                <span class="summary-value">pelapor@example.com</span>
-            </div>
-
-        </div>
-
-        <!-- Detail Kejadian -->
-        <div class="summary-section">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h3 class="summary-heading">Detail Kejadian</h3>
-
-                <a href="detail-kejadian.html" class="section-link">
-                    <i class="fa-solid fa-pen me-1"></i>
-                    Ubah
+                <a href="detail-kejadian.html" class="link-primary fw-semibold small text-decoration-none">
+                  <i class="fa-solid fa-pen me-1"></i>
+                  Ubah
                 </a>
+              </div>
+
+              <dl class="row small mb-0">
+                <dt class="col-sm-4 fw-normal text-body-secondary">Kategori Kasus</dt>
+                <dd class="col-sm-8 fw-semibold">Verbal</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Tanggal Kejadian</dt>
+                <dd class="col-sm-8 fw-semibold">15 Oktober 2026</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Lokasi</dt>
+                <dd class="col-sm-8 fw-semibold">Ruang Kelas</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Kronologi</dt>
+                <dd class="col-sm-8 fw-semibold">Setelah perkuliahan, saya menerima komentar yang membuat saya tidak nyaman. Saya ingin kejadian ini ditinjau oleh pihak yang berwenang.</dd>
+              </dl>
+
             </div>
 
-            <div class="summary-row">
-                <span class="summary-label">Kategori Kasus</span>
-                <span class="summary-value">Verbal</span>
-            </div>
+            <!-- Pelaku dan Bukti -->
+            <div>
 
-            <div class="summary-row">
-                <span class="summary-label">Tanggal Kejadian</span>
-                <span class="summary-value">15 Oktober 2026</span>
-            </div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="h6 fw-bold mb-0">Pelaku dan Bukti</h3>
 
-            <div class="summary-row">
-                <span class="summary-label">Lokasi</span>
-                <span class="summary-value">Ruang Kelas</span>
-            </div>
-
-            <div class="summary-row">
-                <span class="summary-label">Kronologi</span>
-                <span class="summary-value">Setelah perkuliahan, saya menerima komentar yang membuat saya tidak nyaman. Saya ingin kejadian ini ditinjau oleh pihak yang berwenang.</span>
-            </div>
-
-        </div>
-
-        <!-- Pelaku dan Bukti -->
-        <div class="summary-section">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h3 class="summary-heading">Pelaku dan Bukti</h3>
-
-                <a href="pelaku-bukti.html" class="section-link">
-                    <i class="fa-solid fa-pen me-1"></i>
-                    Ubah
+                <a href="pelaku-bukti.html" class="link-primary fw-semibold small text-decoration-none">
+                  <i class="fa-solid fa-pen me-1"></i>
+                  Ubah
                 </a>
+              </div>
+
+              <dl class="row small mb-0">
+                <dt class="col-sm-4 fw-normal text-body-secondary">Kategori Pelaku</dt>
+                <dd class="col-sm-8 fw-semibold">Dosen</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Deskripsi Pelaku</dt>
+                <dd class="col-sm-8 fw-semibold">Dosen pengampu mata kuliah; identitas rinci disampaikan kepada petugas.</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Tingkat Kekhawatiran</dt>
+                <dd class="col-sm-8 fw-semibold">4 - Sangat khawatir</dd>
+
+                <dt class="col-sm-4 fw-normal text-body-secondary">Bukti Pendukung</dt>
+                <dd class="col-sm-8 fw-semibold">bukti-foto.jpg, bukti-dokumen.pdf</dd>
+              </dl>
+
             </div>
 
-            <div class="summary-row">
-                <span class="summary-label">Kategori Pelaku</span>
-                <span class="summary-value">Dosen</span>
+            <div class="alert alert-info mt-4 mb-0 small">
+              <i class="fa-solid fa-circle-info me-2"></i>
+              Pastikan informasi yang Anda berikan benar dan sesuai
+              dengan kejadian yang dilaporkan.
             </div>
 
-            <div class="summary-row">
-                <span class="summary-label">Deskripsi Pelaku</span>
-                <span class="summary-value">Dosen pengampu mata kuliah; identitas rinci disampaikan kepada petugas.</span>
-            </div>
+            <div class="d-flex justify-content-between gap-2 mt-4">
 
-            <div class="summary-row">
-                <span class="summary-label">Tingkat Kekhawatiran</span>
-                <span class="summary-value">4 - Sangat khawatir</span>
-            </div>
-
-            <div class="summary-row">
-                <span class="summary-label">Bukti Pendukung</span>
-                <span class="summary-value">bukti-foto.jpg, bukti-dokumen.pdf</span>
-            </div>
-
-        </div>
-
-        <div class="alert alert-info mt-4 mb-0 small">
-            <i class="fa-solid fa-circle-info me-2"></i>
-            Pastikan informasi yang Anda berikan benar dan sesuai
-            dengan kejadian yang dilaporkan.
-        </div>
-
-        <div class="form-actions">
-
-            <a href="pelaku-bukti.html" class="btn btn-outline-secondary">
+              <a href="pelaku-bukti.html" class="btn btn-outline-secondary">
                 <i class="fa-solid fa-arrow-left me-2"></i>
                 Kembali
-            </a>
+              </a>
 
-            <a href="berhasil.html" class="btn btn-success">
+              <a href="berhasil.html" class="btn btn-success">
                 <i class="fa-solid fa-paper-plane me-2"></i>
                 Kirim Laporan
-            </a>
+              </a>
 
-        </div>
+            </div>
 
-    </section>
+          </div>
+        </section>
 
-</main>
+      </div>
+    </div>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>

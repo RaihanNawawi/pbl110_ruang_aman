@@ -15,209 +15,227 @@
   <div id="app-navbar"></div>
 
   <!-- Konten khusus Beranda -->
-    <main class="app-container">
+  <main class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7">
 
-    <h1 class="page-title">Buat Laporan Kekerasan</h1>
+        <h1 class="h3 fw-bold mb-1">Buat Laporan Kekerasan</h1>
 
-    <p class="page-description">
-        Lengkapi informasi pelaku dan bukti pendukung jika tersedia.
-    </p>
+        <p class="text-body-secondary mb-4">
+          Lengkapi informasi pelaku dan bukti pendukung jika tersedia.
+        </p>
 
-    <div class="stepper">
+        <!-- Stepper -->
+        <ol class="nav nav-pills nav-fill gap-2 mb-4 small text-center">
+          <li class="nav-item">
+            <span class="nav-link h-100 bg-success-subtle text-success-emphasis">
+              <span class="d-block fw-bold"><i class="fa-solid fa-check"></i></span>
+              <span class="d-block">Data Diri</span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link h-100 bg-success-subtle text-success-emphasis">
+              <span class="d-block fw-bold"><i class="fa-solid fa-check"></i></span>
+              <span class="d-block">Detail Kejadian</span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link h-100 active" aria-current="step">
+              <span class="d-block fw-bold">3</span>
+              <span class="d-block">Pelaku & Bukti</span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link h-100 disabled">
+              <span class="d-block fw-bold">4</span>
+              <span class="d-block">Konfirmasi</span>
+            </span>
+          </li>
+        </ol>
 
-        <div class="step completed">
-            <div class="step-number"><i class="fa-solid fa-check"></i></div>
-            <div class="step-label">Data Diri</div>
-        </div>
+        <form action="konfirmasi.html" method="get">
 
-        <div class="step completed">
-            <div class="step-number"><i class="fa-solid fa-check"></i></div>
-            <div class="step-label">Detail Kejadian</div>
-        </div>
+          <section class="card border-0 shadow-sm">
+            <div class="card-body p-4">
 
-        <div class="step active">
-            <div class="step-number">3</div>
-            <div class="step-label">Pelaku & Bukti</div>
-        </div>
+              <h2 class="h5 fw-bold mb-1">Pelaku dan Bukti Pendukung</h2>
 
-        <div class="step">
-            <div class="step-number">4</div>
-            <div class="step-label">Konfirmasi</div>
-        </div>
-
-    </div>
-
-    <form action="konfirmasi.html" method="get">
-
-        <section class="form-card">
-
-            <h2 class="form-section-title">Pelaku dan Bukti Pendukung</h2>
-
-            <p class="form-text mb-4">
+              <p class="form-text mb-4">
                 Isi informasi mengenai pelaku jika diketahui dan
                 lampirkan bukti pendukung jika tersedia.
-            </p>
+              </p>
 
-            <!-- Kategori Pelaku -->
-            <div class="mb-4">
+              <!-- Kategori Pelaku -->
+              <fieldset class="mb-4 border-0 p-0">
 
-                <label class="form-label">
-                    Kategori Pelaku <span class="required">*</span>
-                </label>
+                <legend class="form-label">
+                  Kategori Pelaku <span class="text-danger">*</span>
+                </legend>
 
-                <div class="d-flex flex-wrap gap-3">
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="kategori_pelaku"
-                            value="mahasiswa"
-                            required
-                        >
-                        Mahasiswa
-                    </label>
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="kategori_pelaku"
-                            value="dosen"
-                        >
-                        Dosen
-                    </label>
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="kategori_pelaku"
-                            value="tenaga-kependidikan"
-                        >
-                        Tenaga Kependidikan
-                    </label>
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="kategori_pelaku"
-                            value="lainnya"
-                        >
-                        Lainnya
-                    </label>
-
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kategori_pelaku"
+                    id="pelaku-mahasiswa"
+                    value="mahasiswa"
+                    required
+                  >
+                  <label class="form-check-label" for="pelaku-mahasiswa">Mahasiswa</label>
                 </div>
 
-            </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kategori_pelaku"
+                    id="pelaku-dosen"
+                    value="dosen"
+                  >
+                  <label class="form-check-label" for="pelaku-dosen">Dosen</label>
+                </div>
 
-            <div class="row g-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kategori_pelaku"
+                    id="pelaku-tendik"
+                    value="tenaga-kependidikan"
+                  >
+                  <label class="form-check-label" for="pelaku-tendik">Tenaga Kependidikan</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kategori_pelaku"
+                    id="pelaku-lainnya"
+                    value="lainnya"
+                  >
+                  <label class="form-check-label" for="pelaku-lainnya">Lainnya</label>
+                </div>
+
+              </fieldset>
+
+              <div class="row g-3">
 
                 <!-- Deskripsi Pelaku -->
                 <div class="col-12 col-md-6">
 
-                    <label for="pelaku" class="form-label">
-                        Deskripsi Pelaku <span class="required">*</span>
-                    </label>
+                  <label for="pelaku" class="form-label">
+                    Deskripsi Pelaku <span class="text-danger">*</span>
+                  </label>
 
-                    <textarea
-                        class="form-control"
-                        id="pelaku"
-                        name="pelaku"
-                        maxlength="500"
-                        placeholder="Jelaskan informasi mengenai pelaku jika diketahui."
-                        required
-                    ></textarea>
+                  <textarea
+                    class="form-control"
+                    id="pelaku"
+                    name="pelaku"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="Jelaskan informasi mengenai pelaku jika diketahui."
+                    required
+                  ></textarea>
 
-                    <div class="form-text">
-                        Maksimal 500 karakter.
-                    </div>
+                  <div class="form-text">
+                    Maksimal 500 karakter.
+                  </div>
 
                 </div>
 
                 <!-- Tingkat Kekhawatiran -->
                 <div class="col-12 col-md-6">
 
-                    <label for="kekhawatiran" class="form-label">
-                        Tingkat Kekhawatiran
-                        <span class="required">*</span>
-                    </label>
+                  <label for="kekhawatiran" class="form-label">
+                    Tingkat Kekhawatiran
+                    <span class="text-danger">*</span>
+                  </label>
 
-                    <select
-                        class="form-select"
-                        id="kekhawatiran"
-                        name="kekhawatiran"
-                        required
-                    >
-                        <option value="">Pilih tingkat</option>
-                        <option value="1">1 - Tidak khawatir</option>
-                        <option value="2">2 - Sedikit khawatir</option>
-                        <option value="3">3 - Cukup khawatir</option>
-                        <option value="4">4 - Sangat khawatir</option>
-                        <option value="5">5 - Sangat mengkhawatirkan</option>
-                    </select>
+                  <select
+                    class="form-select"
+                    id="kekhawatiran"
+                    name="kekhawatiran"
+                    required
+                  >
+                    <option value="">Pilih tingkat</option>
+                    <option value="1">1 - Tidak khawatir</option>
+                    <option value="2">2 - Sedikit khawatir</option>
+                    <option value="3">3 - Cukup khawatir</option>
+                    <option value="4">4 - Sangat khawatir</option>
+                    <option value="5">5 - Sangat mengkhawatirkan</option>
+                  </select>
 
-                    <div class="form-text">
-                        Pilih tingkat yang menggambarkan kekhawatiran Anda.
-                    </div>
+                  <div class="form-text">
+                    Pilih tingkat yang menggambarkan kekhawatiran Anda.
+                  </div>
 
                 </div>
 
-            </div>
+              </div>
 
-            <!-- Upload Bukti -->
-            <div class="mt-4">
+              <!-- Upload Bukti -->
+              <div class="mt-4">
 
                 <label for="bukti" class="form-label">
-                    Unggah Bukti Pendukung
-                    <span class="text-muted-custom">(Opsional)</span>
+                  Unggah Bukti Pendukung
+                  <span class="text-body-secondary">(Opsional)</span>
                 </label>
 
-                <label for="bukti" class="upload-box">
+                <label
+                  for="bukti"
+                  class="d-block text-center border rounded-3 bg-body-tertiary p-4"
+                >
 
-                    <i class="fa-solid fa-cloud-arrow-up d-block"></i>
+                  <i class="fa-solid fa-cloud-arrow-up d-block fs-1 text-primary mb-2"></i>
 
-                    <div class="fw-semibold">
-                        Pilih file untuk diunggah
-                    </div>
+                  <div class="fw-semibold">
+                    Pilih file untuk diunggah
+                  </div>
 
-                    <div class="form-text mt-2">
-                        Format: JPG, PNG, PDF. Maksimal 10 MB per file.
-                    </div>
+                  <div class="form-text mt-2">
+                    Format: JPG, PNG, PDF. Maksimal 10 MB per file.
+                  </div>
 
                 </label>
 
                 <input
-                    type="file"
-                    class="form-control mt-2"
-                    id="bukti"
-                    name="bukti"
-                    accept=".jpg,.jpeg,.png,.pdf"
-                    multiple
+                  type="file"
+                  class="form-control mt-2"
+                  id="bukti"
+                  name="bukti"
+                  accept=".jpg,.jpeg,.png,.pdf"
+                  multiple
                 >
 
                 <div class="form-text">
-                    Unggah hanya bukti yang relevan dan aman untuk dibagikan.
+                  Unggah hanya bukti yang relevan dan aman untuk dibagikan.
                 </div>
 
-            </div>
+              </div>
 
-            <div class="form-actions">
+              <div class="d-flex justify-content-between gap-2 mt-4">
 
                 <a href="detail-kejadian.html" class="btn btn-outline-secondary">
-                    <i class="fa-solid fa-arrow-left me-2"></i>
-                    Kembali
+                  <i class="fa-solid fa-arrow-left me-2"></i>
+                  Kembali
                 </a>
 
                 <button type="submit" class="btn btn-primary">
-                    Lanjut ke Konfirmasi
-                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                  Lanjut ke Konfirmasi
+                  <i class="fa-solid fa-arrow-right ms-2"></i>
                 </button>
 
+              </div>
+
             </div>
+          </section>
 
-        </section>
+        </form>
 
-    </form>
-
-</main>
+      </div>
+    </div>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>

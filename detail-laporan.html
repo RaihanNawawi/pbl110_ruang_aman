@@ -14,310 +14,309 @@
   <!-- Navbar reusable -->
   <div id="app-navbar"></div>
 
-<!-- Main Content -->
-<main class="tracking-container report-detail-page">
+  <!-- Main Content -->
+  <main class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7">
 
-    <!-- Page Heading -->
-    <div class="d-flex align-items-center gap-3 mb-4">
+        <!-- Page Heading -->
+        <div class="d-flex align-items-center gap-3 mb-4">
 
-        <a href="status-laporan.html"
-           class="btn btn-light border"
-           aria-label="Kembali ke status laporan">
+          <a href="status-laporan.html"
+             class="btn btn-light border"
+             aria-label="Kembali ke status laporan">
 
             <i class="fa-solid fa-arrow-left"></i>
 
-        </a>
+          </a>
 
-        <div>
-            <h1 class="tracking-title mb-1">
-                Detail Laporan
+          <div>
+            <h1 class="h3 fw-bold mb-1">
+              Detail Laporan
             </h1>
 
-            <p class="tracking-muted mb-0">
-                Contoh tampilan seluruh data yang diisi pada formulir laporan.
+            <p class="text-body-secondary mb-0">
+              Contoh tampilan seluruh data yang diisi pada formulir laporan.
             </p>
+          </div>
+
         </div>
 
-    </div>
-
-    <ul class="nav nav-tabs report-tabs" id="reportDetailTabs" role="tablist">
-        <li class="nav-item" role="presentation">
+        <ul class="nav nav-tabs" id="reportDetailTabs" role="tablist">
+          <li class="nav-item" role="presentation">
             <button
-                class="nav-link active"
-                id="report-info-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#report-info"
-                type="button"
-                role="tab"
-                aria-controls="report-info"
-                aria-selected="true"
+              class="nav-link active"
+              id="report-info-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#report-info"
+              type="button"
+              role="tab"
+              aria-controls="report-info"
+              aria-selected="true"
             >
-                Informasi Pelaporan
+              Informasi Pelaporan
             </button>
-        </li>
-        <li class="nav-item" role="presentation">
+          </li>
+          <li class="nav-item" role="presentation">
             <button
-                class="nav-link"
-                id="report-followup-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#report-followup"
-                type="button"
-                role="tab"
-                aria-controls="report-followup"
-                aria-selected="false"
+              class="nav-link"
+              id="report-followup-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#report-followup"
+              type="button"
+              role="tab"
+              aria-controls="report-followup"
+              aria-selected="false"
             >
-                Tindak Lanjut
-                <span class="followup-count">2</span>
+              Tindak Lanjut
+              <span class="badge rounded-pill text-bg-primary ms-1">2</span>
             </button>
-        </li>
-    </ul>
+          </li>
+        </ul>
 
-    <div class="tab-content report-tab-content">
-        <div
+        <div class="tab-content pt-3">
+          <div
             class="tab-pane fade show active"
             id="report-info"
             role="tabpanel"
             aria-labelledby="report-info-tab"
             tabindex="0"
-        >
+          >
 
-    <!-- Informasi tiket -->
-    <section class="tracking-card mb-3">
+            <!-- Informasi tiket -->
+            <section class="card border-0 shadow-sm mb-3">
+              <div class="card-body p-4">
 
-        <h2 class="tracking-section-title">
-            Informasi Tiket
-        </h2>
+                <h2 class="h5 fw-bold mb-3">
+                  Informasi Tiket
+                </h2>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Kode Tiket</span>
+                <dl class="row small mb-0">
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Kode Tiket</dt>
+                  <dd class="col-sm-8 fw-semibold">RA-20260928-7F3K9</dd>
 
-            <span class="tracking-detail-value">
-                RA-20260928-7F3K9
-            </span>
-        </div>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Status</dt>
+                  <dd class="col-sm-8">
+                    <span class="badge rounded-pill text-bg-warning">
+                      Dalam Verifikasi
+                    </span>
+                  </dd>
+                </dl>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Status</span>
+              </div>
+            </section>
 
-            <span class="tracking-detail-value">
-                <span class="status-badge status-review">
-                    Dalam Verifikasi
-                </span>
-            </span>
-        </div>
+            <!-- Data Pelapor -->
+            <section class="card border-0 shadow-sm mb-3">
+              <div class="card-body p-4">
 
-    </section>
+                <h2 class="h5 fw-bold mb-3">
+                  Data Pelapor
+                </h2>
 
-    <!-- Data Pelapor -->
-    <section class="tracking-card mb-3">
+                <dl class="row small mb-0">
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Jenis Pelaporan</dt>
+                  <dd class="col-sm-8 fw-semibold">Teridentifikasi</dd>
 
-        <h2 class="tracking-section-title">
-            Data Pelapor
-        </h2>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Jenis Civitas Akademika</dt>
+                  <dd class="col-sm-8 fw-semibold">Mahasiswa</dd>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Jenis Pelaporan</span>
-            <span class="tracking-detail-value">Teridentifikasi</span>
-        </div>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">NIM / NIP</dt>
+                  <dd class="col-sm-8 fw-semibold">1234567890</dd>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Jenis Civitas Akademika</span>
-            <span class="tracking-detail-value">Mahasiswa</span>
-        </div>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Email Aktif</dt>
+                  <dd class="col-sm-8 fw-semibold">pelapor@example.com</dd>
+                </dl>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">NIM / NIP</span>
-            <span class="tracking-detail-value">1234567890</span>
-        </div>
+              </div>
+            </section>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Email Aktif</span>
-            <span class="tracking-detail-value">pelapor@example.com</span>
-        </div>
+            <!-- Detail Kejadian -->
+            <section class="card border-0 shadow-sm mb-3">
+              <div class="card-body p-4">
 
-    </section>
+                <h2 class="h5 fw-bold mb-3">
+                  Detail Kejadian
+                </h2>
 
-    <!-- Detail Kejadian -->
-    <section class="tracking-card mb-3">
+                <dl class="row small mb-0">
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Kategori Kasus</dt>
+                  <dd class="col-sm-8 fw-semibold">Verbal</dd>
 
-        <h2 class="tracking-section-title">
-            Detail Kejadian
-        </h2>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Tanggal Kejadian</dt>
+                  <dd class="col-sm-8 fw-semibold">15 Oktober 2026</dd>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Kategori Kasus</span>
-            <span class="tracking-detail-value">Verbal</span>
-        </div>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Lokasi Kejadian</dt>
+                  <dd class="col-sm-8 fw-semibold">Ruang Kelas</dd>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Tanggal Kejadian</span>
-            <span class="tracking-detail-value">15 Oktober 2026</span>
-        </div>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Kronologi Kejadian</dt>
+                  <dd class="col-sm-8 fw-semibold">
+                    Setelah perkuliahan, saya menerima komentar yang membuat saya tidak nyaman.
+                    Saya ingin kejadian ini ditinjau oleh pihak yang berwenang.
+                  </dd>
+                </dl>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Lokasi Kejadian</span>
-            <span class="tracking-detail-value">Ruang Kelas</span>
-        </div>
+              </div>
+            </section>
 
-        <div class="tracking-detail-row tracking-detail-long">
-            <span class="tracking-detail-label">Kronologi Kejadian</span>
-            <p class="tracking-detail-value">
-                Setelah perkuliahan, saya menerima komentar yang membuat saya tidak nyaman.
-                Saya ingin kejadian ini ditinjau oleh pihak yang berwenang.
-            </p>
-        </div>
+            <!-- Informasi Pelaku -->
+            <section class="card border-0 shadow-sm mb-3">
+              <div class="card-body p-4">
 
-    </section>
+                <h2 class="h5 fw-bold mb-3">
+                  Informasi Pelaku
+                </h2>
 
-    <!-- Informasi Pelaku -->
-    <section class="tracking-card mb-3">
+                <dl class="row small mb-0">
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Kategori Pelaku</dt>
+                  <dd class="col-sm-8 fw-semibold">Dosen</dd>
 
-        <h2 class="tracking-section-title">
-            Informasi Pelaku
-        </h2>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Deskripsi Pelaku</dt>
+                  <dd class="col-sm-8 fw-semibold">
+                    Dosen pengampu mata kuliah; identitas rinci disampaikan kepada petugas.
+                  </dd>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Kategori Pelaku</span>
-            <span class="tracking-detail-value">Dosen</span>
-        </div>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Tingkat Kekhawatiran</dt>
+                  <dd class="col-sm-8 fw-semibold">4 - Sangat khawatir</dd>
+                </dl>
 
-        <div class="tracking-detail-row tracking-detail-long">
-            <span class="tracking-detail-label">Deskripsi Pelaku</span>
-            <p class="tracking-detail-value">
-                Dosen pengampu mata kuliah; identitas rinci disampaikan kepada petugas.
-            </p>
-        </div>
+              </div>
+            </section>
 
-        <div class="tracking-detail-row">
-            <span class="tracking-detail-label">Tingkat Kekhawatiran</span>
-            <span class="tracking-detail-value">4 - Sangat khawatir</span>
-        </div>
+            <!-- Lampiran -->
+            <section class="card border-0 shadow-sm mb-3">
+              <div class="card-body p-4">
 
-    </section>
+                <h2 class="h5 fw-bold mb-3">
+                  Bukti Pendukung
+                </h2>
 
-    <!-- Lampiran -->
-    <section class="tracking-card mb-3">
+                <p class="small text-body-secondary mb-3">
+                  Contoh berkas pendukung yang dilampirkan.
+                </p>
 
-        <h2 class="tracking-section-title">
-            Bukti Pendukung
-        </h2>
-
-        <p class="tracking-muted mb-3">
-            Contoh berkas pendukung yang dilampirkan.
-        </p>
-
-        <div class="row g-3">
-            <div class="col-12 col-sm-6">
-                <div class="tracking-attachment">
-                    <i class="fa-regular fa-image" aria-hidden="true"></i>
-                    <div class="flex-grow-1 min-w-0">
-                        <div class="tracking-attachment-name">bukti-foto.jpg</div>
-                        <div class="tracking-attachment-size">JPG · 1.2 MB</div>
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6">
+                    <div class="d-flex align-items-center gap-3 border rounded-3 p-3">
+                      <i class="fa-regular fa-image fs-3 text-primary" aria-hidden="true"></i>
+                      <div class="flex-grow-1 overflow-hidden">
+                        <div class="fw-semibold text-truncate">bukti-foto.jpg</div>
+                        <div class="small text-body-secondary">JPG · 1.2 MB</div>
+                      </div>
                     </div>
-                </div>
-            </div>
+                  </div>
 
-            <div class="col-12 col-sm-6">
-                <div class="tracking-attachment">
-                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
-                    <div class="flex-grow-1 min-w-0">
-                        <div class="tracking-attachment-name">bukti-dokumen.pdf</div>
-                        <div class="tracking-attachment-size">PDF · 856 KB</div>
+                  <div class="col-12 col-sm-6">
+                    <div class="d-flex align-items-center gap-3 border rounded-3 p-3">
+                      <i class="fa-regular fa-file-pdf fs-3 text-danger" aria-hidden="true"></i>
+                      <div class="flex-grow-1 overflow-hidden">
+                        <div class="fw-semibold text-truncate">bukti-dokumen.pdf</div>
+                        <div class="small text-body-secondary">PDF · 856 KB</div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+
+              </div>
+            </section>
+
+            <div class="alert alert-info d-flex gap-3 small mb-0">
+
+              <i class="fa-solid fa-shield-halved fs-5"></i>
+
+              <div>
+                <strong>Jaga Kerahasiaan Tiket</strong>
+
+                <div class="mt-1">
+                  Detail ini memuat informasi yang Anda kirim. Jangan bagikan
+                  kode tiket atau kode akses kepada orang lain.
+                </div>
+              </div>
+
             </div>
-        </div>
 
-    </section>
+          </div>
 
-    <div class="tracking-info">
-
-        <i class="fa-solid fa-shield-halved"></i>
-
-        <div>
-            <strong>Jaga Kerahasiaan Tiket</strong>
-
-            <div class="mt-1">
-                Detail ini memuat informasi yang Anda kirim. Jangan bagikan
-                kode tiket atau kode akses kepada orang lain.
-            </div>
-        </div>
-
-    </div>
-
-        </div>
-
-        <div
+          <div
             class="tab-pane fade"
             id="report-followup"
             role="tabpanel"
             aria-labelledby="report-followup-tab"
             tabindex="0"
-        >
-            <section class="tracking-card followup-card">
-                <div class="followup-heading">
-                    <div>
-                        <h2 class="tracking-section-title mb-1">Pesan dengan Petugas PPKS</h2>
-                        <p class="tracking-muted mb-0">Diskusi tindak lanjut laporan Anda.</p>
-                    </div>
-                    <span class="followup-status">
-                        <span class="followup-status-dot"></span>
-                        Petugas PPKS
-                    </span>
+          >
+            <section class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-3">
+                  <div>
+                    <h2 class="h5 fw-bold mb-1">Pesan dengan Petugas PPKS</h2>
+                    <p class="small text-body-secondary mb-0">Diskusi tindak lanjut laporan Anda.</p>
+                  </div>
+                  <span class="badge rounded-pill bg-success-subtle text-success-emphasis d-inline-flex align-items-center gap-1">
+                    <span class="p-1 bg-success rounded-circle"></span>
+                    Petugas PPKS
+                  </span>
                 </div>
 
-                <div class="chat-thread" aria-label="Contoh percakapan tindak lanjut">
-                    <div class="chat-date">Hari ini · 18 Oktober 2026</div>
+                <div class="d-flex flex-column gap-3 mb-3" aria-label="Contoh percakapan tindak lanjut">
+                  <div class="text-center small text-body-secondary">Hari ini · 18 Oktober 2026</div>
 
-                    <div class="chat-message chat-message-staff">
-                        <div class="chat-sender">Petugas PPKS</div>
-                        <p>
-                            Halo, kami sedang meninjau laporan Anda. Apakah Anda bersedia
-                            memberikan informasi tambahan mengenai waktu kejadian?
-                        </p>
-                        <time datetime="2026-10-18T09:15">09.15</time>
-                    </div>
+                  <div class="align-self-start w-75 bg-body-secondary rounded-3 p-3">
+                    <div class="small fw-semibold">Petugas PPKS</div>
+                    <p class="mb-1">
+                      Halo, kami sedang meninjau laporan Anda. Apakah Anda bersedia
+                      memberikan informasi tambahan mengenai waktu kejadian?
+                    </p>
+                    <time class="d-block text-end small opacity-75" datetime="2026-10-18T09:15">09.15</time>
+                  </div>
 
-                    <div class="chat-message chat-message-reporter">
-                        <div class="chat-sender">Anda</div>
-                        <p>
-                            Kejadian berlangsung setelah perkuliahan selesai, sekitar
-                            pukul 15.00.
-                        </p>
-                        <time datetime="2026-10-18T09:32">09.32</time>
-                    </div>
+                  <div class="align-self-end w-75 bg-primary text-white rounded-3 p-3">
+                    <div class="small fw-semibold">Anda</div>
+                    <p class="mb-1">
+                      Kejadian berlangsung setelah perkuliahan selesai, sekitar
+                      pukul 15.00.
+                    </p>
+                    <time class="d-block text-end small opacity-75" datetime="2026-10-18T09:32">09.32</time>
+                  </div>
 
-                    <div class="chat-message chat-message-staff">
-                        <div class="chat-sender">Petugas PPKS</div>
-                        <p>
-                            Terima kasih atas informasinya. Tim kami akan melanjutkan
-                            proses verifikasi dan menghubungi Anda jika diperlukan.
-                        </p>
-                        <time datetime="2026-10-18T09:40">09.40</time>
-                    </div>
+                  <div class="align-self-start w-75 bg-body-secondary rounded-3 p-3">
+                    <div class="small fw-semibold">Petugas PPKS</div>
+                    <p class="mb-1">
+                      Terima kasih atas informasinya. Tim kami akan melanjutkan
+                      proses verifikasi dan menghubungi Anda jika diperlukan.
+                    </p>
+                    <time class="d-block text-end small opacity-75" datetime="2026-10-18T09:40">09.40</time>
+                  </div>
                 </div>
 
-                <form class="chat-compose" aria-label="Contoh kolom pesan">
-                    <label class="visually-hidden" for="followup-message">Tulis pesan</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="followup-message"
-                        placeholder="Tulis pesan..."
-                        autocomplete="off"
-                    >
-                    <button type="button" class="btn btn-primary" aria-label="Kirim pesan">
-                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                        <span class="d-none d-sm-inline ms-1">Kirim</span>
-                    </button>
+                <form class="input-group" aria-label="Contoh kolom pesan">
+                  <label class="visually-hidden" for="followup-message">Tulis pesan</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="followup-message"
+                    placeholder="Tulis pesan..."
+                    autocomplete="off"
+                  >
+                  <button type="button" class="btn btn-primary" aria-label="Kirim pesan">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    <span class="d-none d-sm-inline ms-1">Kirim</span>
+                  </button>
                 </form>
-                <p class="chat-demo-note mb-0"><i class="fa-solid fa-lock" aria-hidden="true"></i>
-                    <span>Jaga kerahasiaan informasi pribadi</span></p>
-            </section>
-        </div>
-    </div>
 
-</main>
+                <p class="small text-body-secondary mt-2 mb-0">
+                  <i class="fa-solid fa-lock me-1" aria-hidden="true"></i>
+                  <span>Jaga kerahasiaan informasi pribadi</span>
+                </p>
+
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>

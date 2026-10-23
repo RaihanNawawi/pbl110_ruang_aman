@@ -15,247 +15,256 @@
   <div id="app-navbar"></div>
 
   <!-- Main Content -->
-<main class="verification-container">
+  <main class="container py-4">
 
-    <nav class="role-nav mb-4" aria-label="Navigasi Satgas PPKS">
-        <a class="role-nav-link" href="dashboard-satgas.html">
-            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
-            Dashboard
-        </a>
-        <a class="role-nav-link" href="chat-list.html">
-            <i class="fa-solid fa-comments" aria-hidden="true"></i>
-            Chat & Tindak Lanjut
-        </a>
-        <a class="role-nav-link" href="statistik-satgas.html">
-            <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
-            Rekapitulasi
-        </a>
+    <nav class="nav nav-pills gap-2 mb-4" aria-label="Navigasi Satgas PPKS">
+      <a class="nav-link" href="dashboard-satgas.html">
+        <i class="fa-solid fa-gauge-high me-1" aria-hidden="true"></i>
+        Dashboard
+      </a>
+      <a class="nav-link" href="chat-list.html">
+        <i class="fa-solid fa-comments me-1" aria-hidden="true"></i>
+        Chat & Tindak Lanjut
+      </a>
+      <a class="nav-link" href="statistik-satgas.html">
+        <i class="fa-solid fa-chart-column me-1" aria-hidden="true"></i>
+        Rekapitulasi
+      </a>
     </nav>
 
     <!-- Header -->
     <section class="mb-4">
 
-        <a href="detail-laporan-satgas.html"
-           class="small text-secondary text-decoration-none d-inline-block mb-3">
+      <a href="detail-laporan-satgas.html"
+         class="small text-secondary text-decoration-none d-inline-block mb-3">
 
-            <i class="fa-solid fa-arrow-left me-1"></i>
-            Kembali ke Detail Laporan
+        <i class="fa-solid fa-arrow-left me-1"></i>
+        Kembali ke Detail Laporan
 
-        </a>
+      </a>
 
-        <h1 class="verification-title">
-            Verifikasi Laporan
-        </h1>
+      <h1 class="h3 fw-bold">
+        Verifikasi Laporan
+      </h1>
 
-        <p class="verification-description mb-0">
-            Periksa kelengkapan informasi dan dokumentasikan
-            hasil pemeriksaan laporan.
-        </p>
+      <p class="text-body-secondary mb-0">
+        Periksa kelengkapan informasi dan dokumentasikan
+        hasil pemeriksaan laporan.
+      </p>
 
     </section>
 
     <!-- Identitas Laporan -->
-    <section class="verification-card mb-4">
+    <section class="card border-0 shadow-sm mb-4">
+      <div class="card-body p-4">
 
         <div class="d-flex flex-column flex-md-row
                     justify-content-between gap-3">
 
-            <div>
+          <div>
 
-                <div class="verification-label mb-2">
-                    Nomor Tiket
-                </div>
-
-                <h2 class="fs-5 fw-bold mb-2">
-                    RA-20260928-7F3K9
-                </h2>
-
-                <span class="verification-status verification-status-pending">
-                    Menunggu Verifikasi
-                </span>
-
+            <div class="small text-body-secondary mb-2">
+              Nomor Tiket
             </div>
 
-            <div>
+            <h2 class="fs-5 fw-bold mb-2">
+              RA-20260928-7F3K9
+            </h2>
 
-                <div class="verification-label mb-2">
-                    Kategori Kasus
-                </div>
+            <span class="badge rounded-pill text-bg-warning">
+              Menunggu Verifikasi
+            </span>
 
-                <div class="verification-value">
-                    Verbal
-                </div>
+          </div>
 
+          <div>
+
+            <div class="small text-body-secondary mb-2">
+              Kategori Kasus
             </div>
+
+            <div class="fw-semibold">
+              Verbal
+            </div>
+
+          </div>
 
         </div>
 
+      </div>
     </section>
 
     <div class="row g-4">
 
-        <!-- Checklist Verifikasi -->
-        <div class="col-12 col-lg-7">
+      <!-- Checklist Verifikasi -->
+      <div class="col-12 col-lg-7">
 
-            <section class="verification-card">
+        <section class="card border-0 shadow-sm">
+          <div class="card-body p-4">
 
-                <h2 class="verification-card-title">
-                    Checklist Verifikasi
-                </h2>
+            <h2 class="h5 fw-bold">
+              Checklist Verifikasi
+            </h2>
 
-                <p class="verification-description">
-                    Tandai setiap aspek yang telah diperiksa.
-                </p>
+            <p class="text-body-secondary">
+              Tandai setiap aspek yang telah diperiksa.
+            </p>
 
-                <form action="hasil-verifikasi-laporan-satgas.html" method="get">
+            <form action="hasil-verifikasi-laporan-satgas.html" method="get">
 
-                    <div class="verification-check">
+              <div class="list-group">
 
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="check-informasi"
-                            name="checks[]"
-                            value="informasi"
-                            required
-                        >
+                <label class="list-group-item d-flex gap-3">
 
-                        <label for="check-informasi">
+                  <input
+                    class="form-check-input flex-shrink-0"
+                    type="checkbox"
+                    id="check-informasi"
+                    name="checks[]"
+                    value="informasi"
+                    required
+                  >
 
-                            <strong>Informasi laporan lengkap</strong>
+                  <span>
 
-                            <div class="text-secondary">
-                                Kategori, tanggal, lokasi, dan kronologi
-                                telah diperiksa.
-                            </div>
+                    <strong>Informasi laporan lengkap</strong>
 
-                        </label>
+                    <span class="d-block small text-body-secondary">
+                      Kategori, tanggal, lokasi, dan kronologi
+                      telah diperiksa.
+                    </span>
 
-                    </div>
+                  </span>
 
-                    <div class="verification-check">
+                </label>
 
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="check-bukti"
-                            name="checks[]"
-                            value="bukti"
-                            required
-                        >
+                <label class="list-group-item d-flex gap-3">
 
-                        <label for="check-bukti">
+                  <input
+                    class="form-check-input flex-shrink-0"
+                    type="checkbox"
+                    id="check-bukti"
+                    name="checks[]"
+                    value="bukti"
+                    required
+                  >
 
-                            <strong>Bukti pendukung telah diperiksa</strong>
+                  <span>
 
-                            <div class="text-secondary">
-                                Lampiran dapat diakses dan sesuai dengan
-                                informasi yang disampaikan.
-                            </div>
+                    <strong>Bukti pendukung telah diperiksa</strong>
 
-                        </label>
+                    <span class="d-block small text-body-secondary">
+                      Lampiran dapat diakses dan sesuai dengan
+                      informasi yang disampaikan.
+                    </span>
 
-                    </div>
+                  </span>
 
-                    <div class="verification-check">
+                </label>
 
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="check-kronologi"
-                            name="checks[]"
-                            value="kronologi"
-                            required
-                        >
+                <label class="list-group-item d-flex gap-3">
 
-                        <label for="check-kronologi">
+                  <input
+                    class="form-check-input flex-shrink-0"
+                    type="checkbox"
+                    id="check-kronologi"
+                    name="checks[]"
+                    value="kronologi"
+                    required
+                  >
 
-                            <strong>Konsistensi keterangan diperiksa</strong>
+                  <span>
 
-                            <div class="text-secondary">
-                                Kronologi telah ditinjau untuk menentukan
-                                apakah diperlukan klarifikasi tambahan.
-                            </div>
+                    <strong>Konsistensi keterangan diperiksa</strong>
 
-                        </label>
+                    <span class="d-block small text-body-secondary">
+                      Kronologi telah ditinjau untuk menentukan
+                      apakah diperlukan klarifikasi tambahan.
+                    </span>
 
-                    </div>
+                  </span>
 
-                    <hr class="my-4">
+                </label>
 
-                    <div class="mb-4">
+              </div>
 
-                        <label for="hasil"
-                               class="form-label fw-bold small">
+              <hr class="my-4">
 
-                            Hasil Verifikasi
-                            <span class="text-danger">*</span>
+              <div class="mb-4">
 
-                        </label>
+                <label for="hasil"
+                       class="form-label fw-bold small">
 
-                        <select class="form-select verification-input"
-                                id="hasil"
-                                name="hasil"
-                                required>
+                  Hasil Verifikasi
+                  <span class="text-danger">*</span>
 
-                            <option value="">
-                                Pilih hasil verifikasi
-                            </option>
+                </label>
 
-                            <option value="verified">
-                                Informasi cukup — siap ditindaklanjuti
-                            </option>
+                <select class="form-select"
+                        id="hasil"
+                        name="hasil"
+                        required>
 
-                            <option value="clarification">
-                                Memerlukan informasi tambahan
-                            </option>
+                  <option value="">
+                    Pilih hasil verifikasi
+                  </option>
 
-                        </select>
+                  <option value="verified">
+                    Informasi cukup — siap ditindaklanjuti
+                  </option>
 
-                    </div>
+                  <option value="clarification">
+                    Memerlukan informasi tambahan
+                  </option>
 
-                    <div class="mb-4">
+                </select>
 
-                        <label for="catatan-verifikasi"
-                               class="form-label fw-bold small">
+              </div>
 
-                            Catatan Verifikasi
-                            <span class="text-danger">*</span>
+              <div class="mb-4">
 
-                        </label>
+                <label for="catatan-verifikasi"
+                       class="form-label fw-bold small">
 
-                        <textarea
-                            class="form-control verification-textarea"
-                            id="catatan-verifikasi"
-                            name="catatan"
-                            maxlength="500"
-                            placeholder="Tuliskan hasil pemeriksaan atau informasi yang perlu diklarifikasi..."
-                            required
-                        ></textarea>
+                  Catatan Verifikasi
+                  <span class="text-danger">*</span>
 
-                        <div class="form-text">
-                            Maksimal 500 karakter.
-                        </div>
+                </label>
 
-                    </div>
+                <textarea
+                  class="form-control"
+                  id="catatan-verifikasi"
+                  name="catatan"
+                  rows="5"
+                  maxlength="500"
+                  placeholder="Tuliskan hasil pemeriksaan atau informasi yang perlu diklarifikasi..."
+                  required
+                ></textarea>
 
-                    <button type="submit"
-                            class="btn btn-primary verification-button w-100">
+                <div class="form-text">
+                  Maksimal 500 karakter.
+                </div>
 
-                        <i class="fa-solid fa-check me-2"></i>
-                        Simpan Hasil Verifikasi
+              </div>
 
-                    </button>
+              <button type="submit"
+                      class="btn btn-primary w-100 py-2">
 
-                </form>
+                <i class="fa-solid fa-check me-2"></i>
+                Simpan Hasil Verifikasi
 
-            </section>
+              </button>
 
-        </div>
+            </form>
+
+          </div>
+        </section>
+
+      </div>
 
     </div>
 
-</main>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>

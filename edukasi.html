@@ -15,491 +15,485 @@
   <div id="app-navbar"></div>
 
   <!-- Main Content -->
-<main class="ra-content">
+  <main class="container py-4">
 
     <!-- Heading -->
     <section class="mb-4">
 
-        <h1 class="ra-heading">
-            Blog Edukasi RuangAman
-        </h1>
+      <h1 class="h3 fw-bold">
+        Blog Edukasi RuangAman
+      </h1>
 
-        <p class="ra-description mb-0">
-            Temukan informasi mengenai bentuk kekerasan,
-            pencegahan, hak pelapor, serta langkah yang dapat
-            dilakukan untuk mendapatkan bantuan.
-        </p>
+      <p class="text-body-secondary mb-0">
+        Temukan informasi mengenai bentuk kekerasan,
+        pencegahan, hak pelapor, serta langkah yang dapat
+        dilakukan untuk mendapatkan bantuan.
+      </p>
 
     </section>
 
     <!-- Search & Filter -->
-    <section class="ra-card mb-4">
+    <section class="card border-0 shadow-sm mb-4">
 
-        <div class="ra-card-body">
+      <div class="card-body">
 
-            <form action="edukasi.html" method="get">
+        <form action="edukasi.html" method="get">
 
-                <div class="row g-3">
+          <div class="row g-3">
 
-                    <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-7">
 
-                        <label for="cari-artikel"
-                               class="form-label small fw-semibold">
+              <label for="cari-artikel"
+                     class="form-label small fw-semibold">
 
-                            Cari Artikel
+                Cari Artikel
 
-                        </label>
+              </label>
 
-                        <div class="input-group">
+              <div class="input-group">
 
-                            <span class="input-group-text bg-white">
-                                <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                            </span>
+                <span class="input-group-text">
+                  <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                </span>
 
-                            <input
-                                type="search"
-                                class="form-control ra-search"
-                                id="cari-artikel"
-                                name="q"
-                                placeholder="Cari topik edukasi..."
-                            >
+                <input
+                  type="search"
+                  class="form-control"
+                  id="cari-artikel"
+                  name="q"
+                  placeholder="Cari topik edukasi..."
+                >
 
-                        </div>
+              </div>
 
-                    </div>
+            </div>
 
-                    <div class="col-12 col-md-7 col-lg-3">
+            <div class="col-12 col-md-7 col-lg-3">
 
-                        <label for="kategori-artikel"
-                               class="form-label small fw-semibold">
+              <label for="kategori-artikel"
+                     class="form-label small fw-semibold">
 
-                            Kategori
+                Kategori
 
-                        </label>
+              </label>
 
-                        <select
-                            class="form-select ra-filter"
-                            id="kategori-artikel"
-                            name="kategori">
+              <select
+                class="form-select"
+                id="kategori-artikel"
+                name="kategori">
 
-                            <option value="">Semua Kategori</option>
-                            <option value="kekerasan">Bentuk Kekerasan</option>
-                            <option value="pencegahan">Pencegahan</option>
-                            <option value="pelaporan">Prosedur Pelaporan</option>
-                            <option value="dukungan">Dukungan Korban</option>
+                <option value="">Semua Kategori</option>
+                <option value="kekerasan">Bentuk Kekerasan</option>
+                <option value="pencegahan">Pencegahan</option>
+                <option value="pelaporan">Prosedur Pelaporan</option>
+                <option value="dukungan">Dukungan Korban</option>
 
-                        </select>
+              </select>
 
-                    </div>
+            </div>
 
-                    <div class="col-12 col-md-5 col-lg-2 d-flex align-items-end">
+            <div class="col-12 col-md-5 col-lg-2 d-flex align-items-end">
 
-                        <button type="submit"
-                                class="btn btn-primary w-100"
-                                style="min-height:42px;">
+              <button type="submit"
+                      class="btn btn-primary w-100">
 
-                            <i class="fa-solid fa-filter me-2"></i>
-                            Cari
+                <i class="fa-solid fa-filter me-2"></i>
+                Cari
 
-                        </button>
+              </button>
 
-                    </div>
+            </div>
 
-                </div>
+          </div>
 
-            </form>
+        </form>
 
-        </div>
+      </div>
 
     </section>
 
     <!-- Featured Article -->
-    <section class="ra-card mb-4">
+    <section class="card border-0 shadow-sm overflow-hidden mb-4">
 
-        <div class="row g-0 align-items-center">
+      <div class="row g-0 align-items-center">
 
-            <div class="col-12 col-md-5">
+        <div class="col-12 col-md-5 align-self-stretch">
 
-                <div class="ra-article-cover rounded-0 mb-0"
-                     style="height:100%;">
+          <div class="d-flex align-items-center justify-content-center h-100 py-5 bg-primary-subtle text-primary">
 
-                    <i class="fa-solid fa-book-open-reader"></i>
+            <i class="fa-solid fa-book-open-reader display-3"></i>
 
-                </div>
-
-            </div>
-
-            <div class="col-12 col-md-7">
-
-                <div class="ra-card-body">
-
-                    <span class="ra-category">
-                        Artikel Pilihan
-                    </span>
-
-                    <h2 class="ra-heading mt-3"
-                        style="font-size:24px;">
-
-                        Mengenal Bentuk Kekerasan di Kampus
-
-                    </h2>
-
-                    <p class="ra-description">
-
-                        Kenali berbagai bentuk kekerasan, cara
-                        mengenali tanda-tandanya, dan langkah awal
-                        untuk mencari bantuan.
-
-                    </p>
-
-                    <div class="ra-muted mb-3">
-
-                        <i class="fa-regular fa-calendar me-1"></i>
-                        28 September 2026
-
-                        <span class="mx-2">•</span>
-
-                        <i class="fa-regular fa-clock me-1"></i>
-                        5 menit membaca
-
-                    </div>
-
-                    <a href="detail-edukasi.html"
-                       class="btn btn-primary">
-
-                        Baca Artikel
-                        <i class="fa-solid fa-arrow-right ms-2"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
+          </div>
 
         </div>
+
+        <div class="col-12 col-md-7">
+
+          <div class="card-body p-4">
+
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+              Artikel Pilihan
+            </span>
+
+            <h2 class="h4 fw-bold mt-3">
+
+              Mengenal Bentuk Kekerasan di Kampus
+
+            </h2>
+
+            <p class="text-body-secondary">
+
+              Kenali berbagai bentuk kekerasan, cara
+              mengenali tanda-tandanya, dan langkah awal
+              untuk mencari bantuan.
+
+            </p>
+
+            <div class="small text-body-secondary mb-3">
+
+              <i class="fa-regular fa-calendar me-1"></i>
+              28 September 2026
+
+              <span class="mx-2">•</span>
+
+              <i class="fa-regular fa-clock me-1"></i>
+              5 menit membaca
+
+            </div>
+
+            <a href="detail-edukasi.html"
+               class="btn btn-primary">
+
+              Baca Artikel
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
 
     <!-- Article List -->
     <section>
 
-        <div class="d-flex justify-content-between
-                    align-items-center gap-3 mb-3">
+      <div class="d-flex justify-content-between
+                  align-items-center gap-3 mb-3">
 
-            <div>
+        <div>
 
-                <h2 class="ra-section-title mb-1">
-                    Artikel Edukasi
-                </h2>
+          <h2 class="h5 fw-bold mb-1">
+            Artikel Edukasi
+          </h2>
 
-                <p class="ra-muted mb-0">
-                    Informasi untuk membangun lingkungan kampus yang aman.
-                </p>
-
-            </div>
+          <p class="small text-body-secondary mb-0">
+            Informasi untuk membangun lingkungan kampus yang aman.
+          </p>
 
         </div>
 
-        <div class="row g-3">
+      </div>
 
-            <!-- Article 1 -->
-            <div class="col-12 col-md-6 col-xl-4">
+      <div class="row g-3">
 
-                <article class="ra-card">
+        <!-- Article 1 -->
+        <div class="col-12 col-md-6 col-xl-4">
 
-                    <div class="ra-article-image">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
+          <article class="card h-100 border-0 shadow-sm overflow-hidden">
 
-                    <div class="ra-card-body">
+            <div class="d-flex align-items-center justify-content-center py-5 bg-primary-subtle text-primary">
+              <i class="fa-solid fa-shield-halved fs-1"></i>
+            </div>
 
-                        <span class="ra-category">
-                            Bentuk Kekerasan
-                        </span>
+            <div class="card-body d-flex flex-column">
 
-                        <h3 class="ra-article-title mt-3">
-                            Mengenal Bentuk Kekerasan di Kampus
-                        </h3>
+              <div>
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+                  Bentuk Kekerasan
+                </span>
+              </div>
 
-                        <p class="ra-muted">
-                            Pelajari bentuk kekerasan fisik, verbal,
-                            nonverbal, dan bentuk kekerasan lainnya.
-                        </p>
+              <h3 class="h6 fw-bold mt-3">
+                Mengenal Bentuk Kekerasan di Kampus
+              </h3>
 
-                        <div class="ra-muted mb-3">
-                            28 September 2026
-                        </div>
+              <p class="small text-body-secondary">
+                Pelajari bentuk kekerasan fisik, verbal,
+                nonverbal, dan bentuk kekerasan lainnya.
+              </p>
 
-                        <a href="detail-edukasi.html"
-                           class="ra-link">
+              <div class="small text-body-secondary mb-3">
+                28 September 2026
+              </div>
 
-                            Baca Selengkapnya
-                            <i class="fa-solid fa-arrow-right ms-1"></i>
+              <a href="detail-edukasi.html"
+                 class="link-primary fw-semibold small text-decoration-none mt-auto">
 
-                        </a>
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right ms-1"></i>
 
-                    </div>
-
-                </article>
+              </a>
 
             </div>
 
-            <!-- Article 2 -->
-            <div class="col-12 col-md-6 col-xl-4">
-
-                <article class="ra-card">
-
-                    <div class="ra-article-image"
-                         style="color:#059669;background:linear-gradient(135deg,#ecfdf5,#d1fae5);">
-
-                        <i class="fa-solid fa-hand-holding-heart"></i>
-
-                    </div>
-
-                    <div class="ra-card-body">
-
-                        <span class="ra-category">
-                            Dukungan Korban
-                        </span>
-
-                        <h3 class="ra-article-title mt-3">
-                            Langkah Awal Mencari Bantuan
-                        </h3>
-
-                        <p class="ra-muted">
-                            Ketahui langkah yang dapat dilakukan ketika
-                            mengalami atau menyaksikan kekerasan.
-                        </p>
-
-                        <div class="ra-muted mb-3">
-                            25 September 2026
-                        </div>
-
-                        <a href="detail-edukasi.html"
-                           class="ra-link">
-
-                            Baca Selengkapnya
-                            <i class="fa-solid fa-arrow-right ms-1"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Article 3 -->
-            <div class="col-12 col-md-6 col-xl-4">
-
-                <article class="ra-card">
-
-                    <div class="ra-article-image"
-                         style="color:#7c3aed;background:linear-gradient(135deg,#f5f3ff,#ede9fe);">
-
-                        <i class="fa-solid fa-file-circle-check"></i>
-
-                    </div>
-
-                    <div class="ra-card-body">
-
-                        <span class="ra-category">
-                            Prosedur Pelaporan
-                        </span>
-
-                        <h3 class="ra-article-title mt-3">
-                            Cara Melaporkan Kekerasan melalui RuangAman
-                        </h3>
-
-                        <p class="ra-muted">
-                            Pahami tahapan pengaduan dan informasi
-                            yang perlu disiapkan sebelum mengirim laporan.
-                        </p>
-
-                        <div class="ra-muted mb-3">
-                            22 September 2026
-                        </div>
-
-                        <a href="detail-edukasi.html"
-                           class="ra-link">
-
-                            Baca Selengkapnya
-                            <i class="fa-solid fa-arrow-right ms-1"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Article 4 -->
-            <div class="col-12 col-md-6 col-xl-4">
-
-                <article class="ra-card">
-
-                    <div class="ra-article-image"
-                         style="color:#dc2626;background:linear-gradient(135deg,#fff1f2,#ffe4e6);">
-
-                        <i class="fa-solid fa-heart-pulse"></i>
-
-                    </div>
-
-                    <div class="ra-card-body">
-
-                        <span class="ra-category">
-                            Dukungan Korban
-                        </span>
-
-                        <h3 class="ra-article-title mt-3">
-                            Menjaga Diri dan Mencari Dukungan
-                        </h3>
-
-                        <p class="ra-muted">
-                            Informasi mengenai dukungan sosial dan
-                            bantuan profesional setelah mengalami kekerasan.
-                        </p>
-
-                        <div class="ra-muted mb-3">
-                            18 September 2026
-                        </div>
-
-                        <a href="detail-edukasi.html"
-                           class="ra-link">
-
-                            Baca Selengkapnya
-                            <i class="fa-solid fa-arrow-right ms-1"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Article 5 -->
-            <div class="col-12 col-md-6 col-xl-4">
-
-                <article class="ra-card">
-
-                    <div class="ra-article-image"
-                         style="color:#2563eb;">
-
-                        <i class="fa-solid fa-scale-balanced"></i>
-
-                    </div>
-
-                    <div class="ra-card-body">
-
-                        <span class="ra-category">
-                            Hak Pelapor
-                        </span>
-
-                        <h3 class="ra-article-title mt-3">
-                            Memahami Hak dan Kerahasiaan Pelapor
-                        </h3>
-
-                        <p class="ra-muted">
-                            Kenali pentingnya perlindungan identitas
-                            dan penanganan informasi secara bertanggung jawab.
-                        </p>
-
-                        <div class="ra-muted mb-3">
-                            15 September 2026
-                        </div>
-
-                        <a href="detail-edukasi.html"
-                           class="ra-link">
-
-                            Baca Selengkapnya
-                            <i class="fa-solid fa-arrow-right ms-1"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Article 6 -->
-            <div class="col-12 col-md-6 col-xl-4">
-
-                <article class="ra-card">
-
-                    <div class="ra-article-image"
-                         style="color:#d97706;background:linear-gradient(135deg,#fffbeb,#fef3c7);">
-
-                        <i class="fa-solid fa-people-group"></i>
-
-                    </div>
-
-                    <div class="ra-card-body">
-
-                        <span class="ra-category">
-                            Pencegahan
-                        </span>
-
-                        <h3 class="ra-article-title mt-3">
-                            Membangun Lingkungan Kampus yang Aman
-                        </h3>
-
-                        <p class="ra-muted">
-                            Pelajari peran civitas akademika dalam
-                            mencegah kekerasan dan mendukung korban.
-                        </p>
-
-                        <div class="ra-muted mb-3">
-                            12 September 2026
-                        </div>
-
-                        <a href="detail-edukasi.html"
-                           class="ra-link">
-
-                            Baca Selengkapnya
-                            <i class="fa-solid fa-arrow-right ms-1"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
+          </article>
 
         </div>
+
+        <!-- Article 2 -->
+        <div class="col-12 col-md-6 col-xl-4">
+
+          <article class="card h-100 border-0 shadow-sm overflow-hidden">
+
+            <div class="d-flex align-items-center justify-content-center py-5 bg-success-subtle text-success">
+              <i class="fa-solid fa-hand-holding-heart fs-1"></i>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+
+              <div>
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+                  Dukungan Korban
+                </span>
+              </div>
+
+              <h3 class="h6 fw-bold mt-3">
+                Langkah Awal Mencari Bantuan
+              </h3>
+
+              <p class="small text-body-secondary">
+                Ketahui langkah yang dapat dilakukan ketika
+                mengalami atau menyaksikan kekerasan.
+              </p>
+
+              <div class="small text-body-secondary mb-3">
+                25 September 2026
+              </div>
+
+              <a href="detail-edukasi.html"
+                 class="link-primary fw-semibold small text-decoration-none mt-auto">
+
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-12 col-md-6 col-xl-4">
+
+          <article class="card h-100 border-0 shadow-sm overflow-hidden">
+
+            <div class="d-flex align-items-center justify-content-center py-5 bg-info-subtle text-info-emphasis">
+              <i class="fa-solid fa-file-circle-check fs-1"></i>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+
+              <div>
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+                  Prosedur Pelaporan
+                </span>
+              </div>
+
+              <h3 class="h6 fw-bold mt-3">
+                Cara Melaporkan Kekerasan melalui RuangAman
+              </h3>
+
+              <p class="small text-body-secondary">
+                Pahami tahapan pengaduan dan informasi
+                yang perlu disiapkan sebelum mengirim laporan.
+              </p>
+
+              <div class="small text-body-secondary mb-3">
+                22 September 2026
+              </div>
+
+              <a href="detail-edukasi.html"
+                 class="link-primary fw-semibold small text-decoration-none mt-auto">
+
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- Article 4 -->
+        <div class="col-12 col-md-6 col-xl-4">
+
+          <article class="card h-100 border-0 shadow-sm overflow-hidden">
+
+            <div class="d-flex align-items-center justify-content-center py-5 bg-danger-subtle text-danger">
+              <i class="fa-solid fa-heart-pulse fs-1"></i>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+
+              <div>
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+                  Dukungan Korban
+                </span>
+              </div>
+
+              <h3 class="h6 fw-bold mt-3">
+                Menjaga Diri dan Mencari Dukungan
+              </h3>
+
+              <p class="small text-body-secondary">
+                Informasi mengenai dukungan sosial dan
+                bantuan profesional setelah mengalami kekerasan.
+              </p>
+
+              <div class="small text-body-secondary mb-3">
+                18 September 2026
+              </div>
+
+              <a href="detail-edukasi.html"
+                 class="link-primary fw-semibold small text-decoration-none mt-auto">
+
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- Article 5 -->
+        <div class="col-12 col-md-6 col-xl-4">
+
+          <article class="card h-100 border-0 shadow-sm overflow-hidden">
+
+            <div class="d-flex align-items-center justify-content-center py-5 bg-primary-subtle text-primary">
+              <i class="fa-solid fa-scale-balanced fs-1"></i>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+
+              <div>
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+                  Hak Pelapor
+                </span>
+              </div>
+
+              <h3 class="h6 fw-bold mt-3">
+                Memahami Hak dan Kerahasiaan Pelapor
+              </h3>
+
+              <p class="small text-body-secondary">
+                Kenali pentingnya perlindungan identitas
+                dan penanganan informasi secara bertanggung jawab.
+              </p>
+
+              <div class="small text-body-secondary mb-3">
+                15 September 2026
+              </div>
+
+              <a href="detail-edukasi.html"
+                 class="link-primary fw-semibold small text-decoration-none mt-auto">
+
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- Article 6 -->
+        <div class="col-12 col-md-6 col-xl-4">
+
+          <article class="card h-100 border-0 shadow-sm overflow-hidden">
+
+            <div class="d-flex align-items-center justify-content-center py-5 bg-warning-subtle text-warning-emphasis">
+              <i class="fa-solid fa-people-group fs-1"></i>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+
+              <div>
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">
+                  Pencegahan
+                </span>
+              </div>
+
+              <h3 class="h6 fw-bold mt-3">
+                Membangun Lingkungan Kampus yang Aman
+              </h3>
+
+              <p class="small text-body-secondary">
+                Pelajari peran civitas akademika dalam
+                mencegah kekerasan dan mendukung korban.
+              </p>
+
+              <div class="small text-body-secondary mb-3">
+                12 September 2026
+              </div>
+
+              <a href="detail-edukasi.html"
+                 class="link-primary fw-semibold small text-decoration-none mt-auto">
+
+                Baca Selengkapnya
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
 
     </section>
 
     <!-- Information -->
-    <section class="ra-alert ra-alert-info mt-4">
+    <section class="alert alert-info d-flex gap-3 mt-4 mb-0">
 
-        <i class="fa-solid fa-circle-info fs-4"></i>
+      <i class="fa-solid fa-circle-info fs-4"></i>
 
-        <div>
+      <div>
 
-            <strong>Butuh bantuan lebih lanjut?</strong>
+        <strong>Butuh bantuan lebih lanjut?</strong>
 
-            <p class="mb-2">
-                Jika Anda membutuhkan bantuan atau ingin berkonsultasi,
-                silakan kunjungi halaman Kontak Darurat.
-            </p>
+        <p class="mb-2">
+          Jika Anda membutuhkan bantuan atau ingin berkonsultasi,
+          silakan kunjungi halaman Kontak Darurat.
+        </p>
 
-            <a href="kontak-darurat.html"
-               class="ra-link">
+        <a href="kontak-darurat.html"
+           class="alert-link">
 
-                Lihat Kontak Darurat
-                <i class="fa-solid fa-arrow-right ms-1"></i>
+          Lihat Kontak Darurat
+          <i class="fa-solid fa-arrow-right ms-1"></i>
 
-            </a>
+        </a>
 
-        </div>
+      </div>
 
     </section>
 
-</main>
+  </main>
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>
