@@ -26,30 +26,26 @@
         </p>
 
         <!-- Stepper -->
-        <ol class="nav nav-pills nav-fill gap-2 mb-4 small text-center">
+        <ol class="nav nav-pills nav-fill gap-2 mb-4 small text-center" aria-label="Tahapan pelaporan">
           <li class="nav-item">
-            <span class="nav-link h-100 active" aria-current="step">
-              <span class="d-block fw-bold">1</span>
-              <span class="d-block">Data Diri</span>
-            </span>
+            <a class="nav-link h-100 active d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="data-diri.html" aria-current="step">
+              <span class="badge rounded-pill bg-white text-primary">1</span><span>Data Diri</span>
+            </a>
           </li>
           <li class="nav-item">
-            <span class="nav-link h-100 disabled">
-              <span class="d-block fw-bold">2</span>
-              <span class="d-block">Detail Kejadian</span>
-            </span>
+            <a class="nav-link h-100 bg-body-tertiary text-body d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="detail-kejadian.html">
+              <span class="badge rounded-pill text-bg-light">2</span><span>Detail Kejadian</span>
+            </a>
           </li>
           <li class="nav-item">
-            <span class="nav-link h-100 disabled">
-              <span class="d-block fw-bold">3</span>
-              <span class="d-block">Pelaku & Bukti</span>
-            </span>
+            <a class="nav-link h-100 bg-body-tertiary text-body d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="pelaku-bukti.html">
+              <span class="badge rounded-pill text-bg-light">3</span><span>Pelaku &amp; Bukti</span>
+            </a>
           </li>
           <li class="nav-item">
-            <span class="nav-link h-100 disabled">
-              <span class="d-block fw-bold">4</span>
-              <span class="d-block">Konfirmasi</span>
-            </span>
+            <a class="nav-link h-100 bg-body-tertiary text-body d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="konfirmasi.html">
+              <span class="badge rounded-pill text-bg-light">4</span><span>Konfirmasi</span>
+            </a>
           </li>
         </ol>
 
@@ -123,73 +119,10 @@
               </div>
 
               <div id="identitas-fields" hidden>
-                <div class="mb-4">
-                  <div class="form-label">
-                    Jenis Civitas Akademika
-                    <span class="text-danger">*</span>
-                  </div>
-
-                  <div class="row g-2">
-                    <div class="col-12 col-sm-4">
-                      <input
-                        type="radio"
-                        class="btn-check"
-                        name="civitas"
-                        id="civitas-mahasiswa"
-                        value="mahasiswa"
-                        autocomplete="off"
-                        required
-                      >
-                      <label
-                        class="btn btn-outline-primary w-100 h-100 d-flex align-items-center justify-content-center gap-2 p-3"
-                        for="civitas-mahasiswa"
-                      >
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span class="fw-semibold">Mahasiswa</span>
-                      </label>
-                    </div>
-
-                    <div class="col-12 col-sm-4">
-                      <input
-                        type="radio"
-                        class="btn-check"
-                        name="civitas"
-                        id="civitas-dosen"
-                        value="dosen"
-                        autocomplete="off"
-                      >
-                      <label
-                        class="btn btn-outline-primary w-100 h-100 d-flex align-items-center justify-content-center gap-2 p-3"
-                        for="civitas-dosen"
-                      >
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span class="fw-semibold">Dosen</span>
-                      </label>
-                    </div>
-
-                    <div class="col-12 col-sm-4">
-                      <input
-                        type="radio"
-                        class="btn-check"
-                        name="civitas"
-                        id="civitas-tendik"
-                        value="tenaga-kependidikan"
-                        autocomplete="off"
-                      >
-                      <label
-                        class="btn btn-outline-primary w-100 h-100 d-flex align-items-center justify-content-center gap-2 p-3"
-                        for="civitas-tendik"
-                      >
-                        <i class="fa-solid fa-user-gear"></i>
-                        <span class="fw-semibold">Tenaga Kependidikan</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
 
                 <div class="mb-4">
                   <label for="nim" class="form-label">
-                    NIM / NIP
+                    NIM
                     <span class="text-danger">*</span>
                   </label>
 
@@ -198,12 +131,12 @@
                     class="form-control"
                     id="nim"
                     name="nim"
-                    placeholder="Masukkan NIM atau NIP"
+                    placeholder="Masukkan NIM"
                     required
                   >
 
                   <div class="form-text">
-                    Masukkan nomor identitas akademik Anda.
+                    Masukkan nomor induk mahasiswa Anda.
                   </div>
                 </div>
 

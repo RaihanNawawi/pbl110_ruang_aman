@@ -26,30 +26,26 @@
         </p>
 
         <!-- Stepper -->
-        <ol class="nav nav-pills nav-fill gap-2 mb-4 small text-center">
+        <ol class="nav nav-pills nav-fill gap-2 mb-4 small text-center" aria-label="Tahapan pelaporan">
           <li class="nav-item">
-            <span class="nav-link h-100 bg-success-subtle text-success-emphasis">
-              <span class="d-block fw-bold"><i class="fa-solid fa-check"></i></span>
-              <span class="d-block">Data Diri</span>
-            </span>
+            <a class="nav-link h-100 bg-success-subtle text-success-emphasis d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="data-diri.html">
+              <span class="badge rounded-pill text-bg-success"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span>Data Diri</span>
+            </a>
           </li>
           <li class="nav-item">
-            <span class="nav-link h-100 active" aria-current="step">
-              <span class="d-block fw-bold">2</span>
-              <span class="d-block">Detail Kejadian</span>
-            </span>
+            <a class="nav-link h-100 active d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="detail-kejadian.html" aria-current="step">
+              <span class="badge rounded-pill bg-white text-primary">2</span><span>Detail Kejadian</span>
+            </a>
           </li>
           <li class="nav-item">
-            <span class="nav-link h-100 disabled">
-              <span class="d-block fw-bold">3</span>
-              <span class="d-block">Pelaku & Bukti</span>
-            </span>
+            <a class="nav-link h-100 bg-body-tertiary text-body d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="pelaku-bukti.html">
+              <span class="badge rounded-pill text-bg-light">3</span><span>Pelaku &amp; Bukti</span>
+            </a>
           </li>
           <li class="nav-item">
-            <span class="nav-link h-100 disabled">
-              <span class="d-block fw-bold">4</span>
-              <span class="d-block">Konfirmasi</span>
-            </span>
+            <a class="nav-link h-100 bg-body-tertiary text-body d-flex flex-column flex-sm-row align-items-center justify-content-center gap-1 gap-sm-2 px-1 px-sm-2" href="konfirmasi.html">
+              <span class="badge rounded-pill text-bg-light">4</span><span>Konfirmasi</span>
+            </a>
           </li>
         </ol>
 

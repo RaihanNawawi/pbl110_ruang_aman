@@ -1528,7 +1528,6 @@ textarea.form-control {
 .chat-message time {
     display: block;
     margin-top: 4px;
-    color: #64748b;
     font-size: 9px;
     text-align: right;
 }

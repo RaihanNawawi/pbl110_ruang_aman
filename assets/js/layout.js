@@ -2,6 +2,12 @@ const ROOT_URL = new URL("../../", import.meta.url);
 
 
 const PAGE_CONFIG = {
+  "dashboard-pelapor.html": {
+    title: "Dashboard Pelapor | RuangAman",
+    description:
+      "Pantau status laporan teridentifikasi yang Anda kirim melalui RuangAman."
+  },
+
   "pages/index.html": {
     title: "RuangAman - Beranda",
     description:

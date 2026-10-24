@@ -118,10 +118,7 @@
                   <dt class="col-sm-4 fw-normal text-body-secondary">Jenis Pelaporan</dt>
                   <dd class="col-sm-8 fw-semibold">Teridentifikasi</dd>
 
-                  <dt class="col-sm-4 fw-normal text-body-secondary">Jenis Civitas Akademika</dt>
-                  <dd class="col-sm-8 fw-semibold">Mahasiswa</dd>
-
-                  <dt class="col-sm-4 fw-normal text-body-secondary">NIM / NIP</dt>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">NIM</dt>
                   <dd class="col-sm-8 fw-semibold">1234567890</dd>
 
                   <dt class="col-sm-4 fw-normal text-body-secondary">Email Aktif</dt>
@@ -176,8 +173,8 @@
                     Dosen pengampu mata kuliah; identitas rinci disampaikan kepada petugas.
                   </dd>
 
-                  <dt class="col-sm-4 fw-normal text-body-secondary">Tingkat Kekhawatiran</dt>
-                  <dd class="col-sm-8 fw-semibold">4 - Sangat khawatir</dd>
+                  <dt class="col-sm-4 fw-normal text-body-secondary">Tingkat urgensi/keparahan</dt>
+                  <dd class="col-sm-8 fw-semibold">4 - Sangat tinggi</dd>
                 </dl>
 
               </div>
@@ -192,7 +189,7 @@
                 </h2>
 
                 <p class="small text-body-secondary mb-3">
-                  Contoh berkas pendukung yang dilampirkan.
+                  Berkas pendukung yang dilampirkan.
                 </p>
 
                 <div class="row g-3">
@@ -203,6 +200,18 @@
                         <div class="fw-semibold text-truncate">bukti-foto.jpg</div>
                         <div class="small text-body-secondary">JPG · 1.2 MB</div>
                       </div>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-primary flex-shrink-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalPreviewBukti"
+                        data-preview-src="assets/uploads/bukti-foto.jpg"
+                        data-preview-type="image"
+                        data-preview-name="bukti-foto.jpg"
+                      >
+                        <i class="fa-regular fa-eye me-sm-1" aria-hidden="true"></i>
+                        <span class="visually-hidden"> pratinjau bukti-foto.jpg</span>
+                      </button>
                     </div>
                   </div>
 
@@ -213,6 +222,18 @@
                         <div class="fw-semibold text-truncate">bukti-dokumen.pdf</div>
                         <div class="small text-body-secondary">PDF · 856 KB</div>
                       </div>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-primary flex-shrink-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalPreviewBukti"
+                        data-preview-src="assets/uploads/bukti-dokumen.pdf"
+                        data-preview-type="pdf"
+                        data-preview-name="bukti-dokumen.pdf"
+                      >
+                        <i class="fa-regular fa-eye me-sm-1" aria-hidden="true"></i>
+                        <span class="visually-hidden"> pratinjau bukti-dokumen.pdf</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -237,81 +258,140 @@
 
           </div>
 
-          <div
-            class="tab-pane fade"
-            id="report-followup"
-            role="tabpanel"
-            aria-labelledby="report-followup-tab"
-            tabindex="0"
-          >
-            <section class="card border-0 shadow-sm">
-              <div class="card-body p-4">
+          
+<div
+  class="tab-pane fade"
+  id="report-followup"
+  role="tabpanel"
+  aria-labelledby="report-followup-tab"
+  tabindex="0"
+>
+  <section class="card border shadow-sm chat-card">
+    <!-- Header -->
+    <div class="card-header bg-body p-3">
+      <div class="d-flex align-items-center gap-3">
+        <div class="rounded-circle bg-primary-subtle text-primary d-flex
+                    align-items-center justify-content-center flex-shrink-0"
+             style="width:44px;height:44px">
+          <i class="fa-solid fa-user-shield fs-5"></i>
+        </div>
 
-                <div class="d-flex justify-content-between align-items-start gap-2 mb-3">
-                  <div>
-                    <h2 class="h5 fw-bold mb-1">Pesan dengan Petugas PPKS</h2>
-                    <p class="small text-body-secondary mb-0">Diskusi tindak lanjut laporan Anda.</p>
-                  </div>
-                  <span class="badge rounded-pill bg-success-subtle text-success-emphasis d-inline-flex align-items-center gap-1">
-                    <span class="p-1 bg-success rounded-circle"></span>
-                    Petugas PPKS
-                  </span>
-                </div>
-
-                <div class="d-flex flex-column gap-3 mb-3" aria-label="Contoh percakapan tindak lanjut">
-                  <div class="text-center small text-body-secondary">Hari ini · 18 Oktober 2026</div>
-
-                  <div class="align-self-start w-75 bg-body-secondary rounded-3 p-3">
-                    <div class="small fw-semibold">Petugas PPKS</div>
-                    <p class="mb-1">
-                      Halo, kami sedang meninjau laporan Anda. Apakah Anda bersedia
-                      memberikan informasi tambahan mengenai waktu kejadian?
-                    </p>
-                    <time class="d-block text-end small opacity-75" datetime="2026-10-18T09:15">09.15</time>
-                  </div>
-
-                  <div class="align-self-end w-75 bg-primary text-white rounded-3 p-3">
-                    <div class="small fw-semibold">Anda</div>
-                    <p class="mb-1">
-                      Kejadian berlangsung setelah perkuliahan selesai, sekitar
-                      pukul 15.00.
-                    </p>
-                    <time class="d-block text-end small opacity-75" datetime="2026-10-18T09:32">09.32</time>
-                  </div>
-
-                  <div class="align-self-start w-75 bg-body-secondary rounded-3 p-3">
-                    <div class="small fw-semibold">Petugas PPKS</div>
-                    <p class="mb-1">
-                      Terima kasih atas informasinya. Tim kami akan melanjutkan
-                      proses verifikasi dan menghubungi Anda jika diperlukan.
-                    </p>
-                    <time class="d-block text-end small opacity-75" datetime="2026-10-18T09:40">09.40</time>
-                  </div>
-                </div>
-
-                <form class="input-group" aria-label="Contoh kolom pesan">
-                  <label class="visually-hidden" for="followup-message">Tulis pesan</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="followup-message"
-                    placeholder="Tulis pesan..."
-                    autocomplete="off"
-                  >
-                  <button type="button" class="btn btn-primary" aria-label="Kirim pesan">
-                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                    <span class="d-none d-sm-inline ms-1">Kirim</span>
-                  </button>
-                </form>
-
-                <p class="small text-body-secondary mt-2 mb-0">
-                  <i class="fa-solid fa-lock me-1" aria-hidden="true"></i>
-                  <span>Jaga kerahasiaan informasi pribadi</span>
-                </p>
-
-              </div>
-            </section>
+        <div class="flex-grow-1 overflow-hidden">
+          <h2 class="h6 fw-bold mb-1">Petugas PPKS</h2>
+          <div class="small text-body-secondary">
+            <span id="petugas-indicator"
+                  class="d-inline-block rounded-circle bg-success me-1"
+                  style="width:7px;height:7px"></span>
+            <span id="petugas-status-text">Online</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area percakapan yang dapat di-scroll -->
+    <div
+      class="card-body d-flex flex-column gap-3 overflow-auto chat-messages bg-body-tertiary p-3"
+      id="followup-conversation"
+      aria-label="Percakapan tindak lanjut"
+      aria-live="polite"
+      tabindex="0"
+    >
+      <div class="text-center mb-2">
+        <span class="badge bg-body text-body-secondary border rounded-pill fw-normal">
+          18 Oktober 2026
+        </span>
+      </div>
+
+      <div class="align-self-start chat-message">
+        <div class="bg-body border rounded-3 p-3">
+          <p class="mb-1">
+            Halo, kami sedang meninjau laporan Anda. Apakah Anda bersedia
+            memberikan informasi tambahan mengenai waktu kejadian?
+          </p>
+          <div class="text-end small text-body-secondary">
+            <time datetime="2026-10-18T09:15">09.15</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="align-self-end chat-message">
+        <div class="bg-primary text-white rounded-3 p-3">
+          <p class="mb-1">
+            Kejadian berlangsung setelah perkuliahan selesai, sekitar pukul 15.00.
+          </p>
+          <div class="text-end small text-white">
+            <time datetime="2026-10-18T09:32">09.32</time>
+            <i class="fa-solid fa-check-double ms-1"
+               aria-label="Terkirim"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="align-self-start chat-message">
+        <div class="bg-body border rounded-3 p-3">
+          <p class="mb-1">
+            Terima kasih atas informasinya. Tim kami akan melanjutkan
+            proses verifikasi dan menghubungi Anda jika diperlukan.
+          </p>
+          <div class="text-end small text-body-secondary">
+            <time datetime="2026-10-18T09:40">09.40</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="align-self-end chat-message">
+        <div class="bg-primary text-white rounded-3 p-3">
+          <p class="mb-1">
+            Baik, terima kasih atas kabarnya. Saya akan menunggu informasi selanjutnya.
+          </p>
+          <div class="text-end small text-white">
+            <time datetime="2026-10-18T09:45">09.45</time>
+            <i class="fa-solid fa-check-double ms-1"
+               aria-label="Terkirim"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="align-self-start chat-message">
+        <div class="bg-body border rounded-3 p-3">
+          <p class="mb-1">
+            Silakan kirim pesan di sini jika ada informasi tambahan
+            atau jika Anda membutuhkan bantuan.
+          </p>
+          <div class="text-end small text-body-secondary">
+            <time datetime="2026-10-18T09:47">09.47</time>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form pesan -->
+    <div class="card-footer bg-body p-3">
+      <form id="followup-form" class="d-flex gap-2">
+        <label for="followup-message" class="visually-hidden">
+          Tulis pesan
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          id="followup-message"
+          placeholder="Tulis pesan..."
+          autocomplete="off"
+          maxlength="2000"
+          required
+        >
+
+        <button type="submit" class="btn btn-primary px-3"
+                aria-label="Kirim pesan">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span class="d-none d-sm-inline ms-1">Kirim</span>
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+
         </div>
 
       </div>
@@ -320,5 +400,141 @@
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>
+
+  <div
+    class="modal fade"
+    id="modalPreviewBukti"
+    tabindex="-1"
+    aria-labelledby="judulPreviewBukti"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5 text-break" id="judulPreviewBukti">Pratinjau bukti</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup pratinjau"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="alert alert-danger d-none text-start" id="previewBuktiError" role="alert">
+            Pratinjau tidak dapat ditampilkan. Berkas mungkin tidak tersedia atau tidak dapat dibuka.
+          </div>
+          <img class="img-fluid d-none mx-auto" id="previewBuktiImage" alt="">
+          <div class="ratio ratio-4x3 d-none" id="previewBuktiPdfContainer">
+            <iframe id="previewBuktiPdf" title="Pratinjau dokumen PDF"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  
+const conversation = document.getElementById("followup-conversation");
+const chatForm = document.getElementById("followup-form");
+const messageInput = document.getElementById("followup-message");
+const followupTab = document.getElementById("report-followup-tab");
+const previewModal = document.getElementById("modalPreviewBukti");
+const previewImage = document.getElementById("previewBuktiImage");
+const previewPdfContainer = document.getElementById("previewBuktiPdfContainer");
+const previewPdf = document.getElementById("previewBuktiPdf");
+const previewError = document.getElementById("previewBuktiError");
+const previewOpenLink = document.getElementById("previewBuktiOpen");
+
+function scrollToLatest() {
+  conversation.scrollTop = conversation.scrollHeight;
+}
+
+// Buka tab chat: arahkan ke pesan terbaru.
+followupTab.addEventListener("shown.bs.tab", scrollToLatest);
+
+// Format waktu lokal.
+function getTime() {
+  return new Date().toLocaleTimeString("id-ID", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
+}
+
+previewModal.addEventListener("show.bs.modal", (event) => {
+  const trigger = event.relatedTarget;
+  const source = trigger.dataset.previewSrc;
+  const type = trigger.dataset.previewType;
+  const name = trigger.dataset.previewName;
+
+  document.getElementById("judulPreviewBukti").textContent = name;
+  previewError.classList.add("d-none");
+  previewImage.classList.add("d-none");
+  previewPdfContainer.classList.add("d-none");
+  previewOpenLink.classList.add("d-none");
+  previewImage.removeAttribute("src");
+  previewPdf.removeAttribute("src");
+
+  if (!source || !["image", "pdf"].includes(type)) {
+    previewError.classList.remove("d-none");
+    return;
+  }
+
+  previewOpenLink.href = source;
+  previewOpenLink.classList.remove("d-none");
+
+  if (type === "image") {
+    previewImage.alt = `Pratinjau ${name}`;
+    previewImage.onload = () => previewImage.classList.remove("d-none");
+    previewImage.onerror = () => previewError.classList.remove("d-none");
+    previewImage.src = source;
+    return;
+  }
+
+  previewPdfContainer.classList.remove("d-none");
+  previewPdf.src = source;
+});
+
+previewModal.addEventListener("hidden.bs.modal", () => {
+  previewImage.removeAttribute("src");
+  previewPdf.removeAttribute("src");
+});
+
+// Kirim pesan demo.
+chatForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const message = messageInput.value.trim();
+  if (!message) return;
+
+  const time = new Date();
+  const bubble = document.createElement("div");
+  bubble.className = "align-self-end chat-message";
+
+  const content = document.createElement("div");
+  content.className = "bg-primary text-white rounded-3 p-3";
+
+  const text = document.createElement("p");
+  text.className = "mb-1";
+  text.textContent = message;
+
+  const timestamp = document.createElement("div");
+  timestamp.className = "text-end small text-white";
+
+  const timeElement = document.createElement("time");
+  timeElement.dateTime = time.toISOString();
+  timeElement.textContent = getTime();
+
+  const status = document.createElement("i");
+  status.className = "fa-solid fa-check ms-1";
+  status.setAttribute("aria-label", "Terkirim");
+
+  timestamp.append(timeElement, status);
+  content.append(text, timestamp);
+  bubble.append(content);
+  conversation.append(bubble);
+
+  messageInput.value = "";
+  scrollToLatest();
+});
+
+scrollToLatest();
+
+  </script>
 </body>
 </html>
