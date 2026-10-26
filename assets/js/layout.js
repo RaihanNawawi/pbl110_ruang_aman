@@ -2,6 +2,24 @@ const ROOT_URL = new URL("../../", import.meta.url);
 
 
 const PAGE_CONFIG = {
+  "detail-laporan.html": {
+    title: "Detail Laporan | RuangAman",
+    description:
+      "Pantau perkembangan laporan dan komunikasi dengan Satgas."
+  },
+
+  "detail-laporan-satgas.html": {
+    title: "Detail Laporan Satgas | RuangAman",
+    description:
+      "Tinjau informasi, bukti, dan tindak lanjut laporan."
+  },
+
+  "detail-laporan-admin.html": {
+    title: "Detail Laporan Admin | RuangAman",
+    description:
+      "Kelola laporan, penugasan Satgas, dan perkembangan penanganan."
+  },
+
   "dashboard-pelapor.html": {
     title: "Dashboard Pelapor | RuangAman",
     description:

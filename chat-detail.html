@@ -24,17 +24,13 @@
             <i class="fa-solid fa-gauge-high me-1" aria-hidden="true"></i>
             Dashboard
         </a>
-        <a class="nav-link active shadow-sm" href="chat-list.html" aria-current="page">
-            <i class="fa-solid fa-comments me-1" aria-hidden="true"></i>
-            Chat & Tindak Lanjut
-        </a>
     </nav>
 
     <!-- Page Heading -->
     <section class="mb-4">
-        <a href="chat-list.html" class="small text-secondary text-decoration-none d-inline-block mb-3">
+        <a href="dashboard-satgas.html#daftar-kasus" class="small text-secondary text-decoration-none d-inline-block mb-3">
             <i class="fa-solid fa-arrow-left me-1"></i>
-            Kembali ke Daftar Percakapan
+            Kembali ke Dashboard Satgas
         </a>
 
         <h1 class="h3 fw-bold text-dark mb-1">
@@ -60,76 +56,24 @@
                     </div>
 
                     <div class="flex-grow-1">
-                        <h2 class="h6 fw-bold mb-0 text-dark">
+                        <h2 class="h6 fw-bold mb-0 text-dark" id="chat-ticket-heading">
                             Pelapor
                         </h2>
-                        <small class="text-muted">
+                        <small class="text-muted" id="chat-ticket-number">
                             Nomor Tiket: RA-20260928-7F3K9
                         </small>
                     </div>
 
-                    <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
+                    <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill" id="chat-header-status">
                         Dalam Penanganan
                     </span>
                 </div>
 
                 <!-- Message History -->
-                <div class="card-body p-4 overflow-auto" style="max-height: 450px;">
-
+                <div class="card-body p-4 overflow-auto" style="max-height: 450px;" id="chat-history" aria-live="polite">
                     <div class="text-center my-3">
-                        <span class="badge bg-secondary-subtle text-secondary px-3 py-1 rounded-pill small">
-                            28 September 2026
-                        </span>
+                        <span class="badge bg-secondary-subtle text-secondary px-3 py-1 rounded-pill small" id="chat-date">28 September 2026</span>
                     </div>
-
-                    <!-- Pesan Satgas (Received) -->
-                    <div class="mb-3">
-                        <div class="small text-muted mb-1">Satgas PPKS</div>
-                        <div class="p-3 bg-light text-dark rounded-4 shadow-sm w-75">
-                            Selamat siang. Kami sedang menindaklanjuti laporan Anda.
-                            <br><br>
-                            Untuk membantu proses pemeriksaan, apakah Anda bersedia memberikan informasi tambahan mengenai waktu kejadian?
-                        </div>
-                        <div class="small text-muted mt-1" style="font-size: 0.75rem;">
-                            10.30 · Satgas PPKS
-                        </div>
-                    </div>
-
-                    <!-- Pesan Pelapor (Sent) -->
-                    <div class="mb-3 d-flex flex-column align-items-end">
-                        <div class="small text-muted mb-1">Anda · Pelapor</div>
-                        <div class="p-3 bg-primary text-white rounded-4 shadow-sm w-75">
-                            Selamat siang. Kejadian tersebut berlangsung sekitar pukul 09.00 ketika kegiatan perkuliahan berlangsung.
-                        </div>
-                        <div class="small text-muted mt-1" style="font-size: 0.75rem;">
-                            11.05 · Terkirim
-                        </div>
-                    </div>
-
-                    <!-- Pesan Satgas -->
-                    <div class="mb-3">
-                        <div class="small text-muted mb-1">Satgas PPKS</div>
-                        <div class="p-3 bg-light text-dark rounded-4 shadow-sm w-75">
-                            Terima kasih atas informasinya.
-                            <br><br>
-                            Apabila terdapat informasi tambahan atau dokumen pendukung yang relevan, Anda dapat mengirimkannya melalui percakapan ini.
-                        </div>
-                        <div class="small text-muted mt-1" style="font-size: 0.75rem;">
-                            11.20 · Satgas PPKS
-                        </div>
-                    </div>
-
-                    <!-- Pesan Pelapor -->
-                    <div class="mb-3 d-flex flex-column align-items-end">
-                        <div class="small text-muted mb-1">Anda · Pelapor</div>
-                        <div class="p-3 bg-primary text-white rounded-4 shadow-sm w-75">
-                            Baik, saya akan mengirimkan informasi tambahan yang diperlukan.
-                        </div>
-                        <div class="small text-muted mt-1" style="font-size: 0.75rem;">
-                            11.35 · Terkirim
-                        </div>
-                    </div>
-
                 </div>
 
                 <!-- Message Composer -->
@@ -193,21 +137,21 @@
 
                 <div class="mb-3">
                     <div class="text-muted small mb-1">Nomor Tiket</div>
-                    <div class="fw-semibold text-primary font-monospace">
+                    <div class="fw-semibold text-primary font-monospace" id="case-ticket-number">
                         RA-20260928-7F3K9
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <div class="text-muted small mb-1">Kategori Kasus</div>
-                    <div class="small fw-semibold">
+                    <div class="small fw-semibold" id="case-category">
                         Verbal
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <div class="text-muted small mb-1">Status Penanganan</div>
-                    <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
+                    <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill" id="case-status">
                         Dalam Penanganan
                     </span>
                 </div>
@@ -284,5 +228,74 @@
 
   <!-- Footer reusable -->
   <div id="app-footer"></div>
+  <script>
+    const conversations = {
+      "RA-20260928-7F3K9": {
+        category: "Verbal", status: "Dalam Penanganan", date: "28 September 2026",
+        badge: "bg-success-subtle text-success border-success-subtle",
+        messages: [
+          ["Satgas PPKS", "Selamat siang. Kami sedang menindaklanjuti laporan Anda. Untuk membantu proses pemeriksaan, apakah Anda bersedia memberikan informasi tambahan mengenai waktu kejadian?", "10.30", false],
+          ["Anda · Pelapor", "Selamat siang. Kejadian tersebut berlangsung sekitar pukul 09.00 ketika kegiatan perkuliahan berlangsung.", "11.05", true],
+          ["Satgas PPKS", "Terima kasih atas informasinya. Apabila terdapat informasi tambahan atau dokumen pendukung yang relevan, Anda dapat mengirimkannya melalui percakapan ini.", "11.20", false],
+          ["Anda · Pelapor", "Baik, saya akan mengirimkan informasi tambahan yang diperlukan.", "11.35", true]
+        ]
+      },
+      "RA-20260927-9Q2M4": {
+        category: "Nonverbal", status: "Menunggu Informasi", date: "27 September 2026",
+        badge: "bg-warning-subtle text-warning-emphasis border-warning-subtle",
+        messages: [
+          ["Satgas PPKS", "Mohon bantuannya untuk melengkapi informasi terkait waktu kejadian.", "10.40", false],
+          ["Anda · Pelapor", "Kejadian berlangsung sekitar waktu istirahat siang.", "11.15", true]
+        ]
+      },
+      "RA-20260926-1A8Q7": {
+        category: "Cyberbullying", status: "Dalam Penanganan", date: "26 September 2026",
+        badge: "bg-success-subtle text-success border-success-subtle",
+        messages: [
+          ["Satgas PPKS", "Laporan Anda sedang ditindaklanjuti. Kami akan mengabari Anda jika ada perkembangan.", "10.20", false],
+          ["Anda · Pelapor", "Terima kasih atas pembaruan informasi yang telah diberikan.", "Kemarin", true]
+        ]
+      },
+      "RA-20260925-5BC21": {
+        category: "Verbal", status: "Selesai", date: "25 September 2026",
+        badge: "bg-secondary-subtle text-secondary border-secondary-subtle",
+        messages: [
+          ["Satgas PPKS", "Penanganan laporan telah selesai. Terima kasih atas kerja sama Anda.", "14.10", false],
+          ["Anda · Pelapor", "Baik, terima kasih atas informasi yang diberikan.", "14.30", true]
+        ]
+      }
+    };
+    const ticket = new URLSearchParams(location.search).get("ticket");
+    const conversation = conversations[ticket];
+
+    if (conversation) {
+      document.getElementById("chat-ticket-number").textContent = `Nomor Tiket: ${ticket}`;
+      document.getElementById("case-ticket-number").textContent = ticket;
+      document.getElementById("case-category").textContent = conversation.category;
+      ["case-status", "chat-header-status"].forEach((id) => {
+        const status = document.getElementById(id);
+        status.textContent = conversation.status;
+        status.className = `badge border px-3 py-2 rounded-pill ${conversation.badge}`;
+      });
+      document.getElementById("chat-date").textContent = conversation.date;
+      const history = document.getElementById("chat-history");
+      conversation.messages.forEach(([sender, text, time, sent]) => {
+        const message = document.createElement("div");
+        message.className = sent ? "mb-3 d-flex flex-column align-items-end" : "mb-3";
+        const author = document.createElement("div");
+        author.className = "small text-muted mb-1";
+        author.textContent = sender;
+        const bubble = document.createElement("div");
+        bubble.className = `p-3 ${sent ? "bg-primary text-white" : "bg-light text-dark"} rounded-4 shadow-sm w-75`;
+        bubble.textContent = text;
+        const timestamp = document.createElement("div");
+        timestamp.className = "small text-muted mt-1";
+        timestamp.textContent = `${time} · ${sent ? "Terkirim" : "Satgas PPKS"}`;
+        message.append(author, bubble, timestamp);
+        history.append(message);
+      });
+      history.scrollTop = history.scrollHeight;
+    }
+  </script>
 </body>
 </html>
