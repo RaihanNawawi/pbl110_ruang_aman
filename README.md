@@ -2,7 +2,7 @@
 
 RuangAman adalah platform pelaporan kekerasan dan pelecehan di lingkungan kampus Politeknik Negeri Batam. Aplikasi ini menyediakan alur antarmuka bagi pelapor untuk membuat dan melacak laporan, serta halaman bagi Satgas dan admin untuk meninjau dan menindaklanjuti kasus. Tersedia pula informasi edukasi dan kontak darurat.
 
-![Project Mockup](docs/mockups/mockup-RuangAman.png)
+![Project Mockup](docs/mockups/mockup_RuangAman.png)
 
 ## Teknologi
 
