@@ -1,8 +1,18 @@
+<?php
+
+require_once __DIR__ . '/../../backend/config/app.php';
+
+?>
+
 <!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    <?= htmlspecialchars($app_name) ?>
+  </title>
 
   <script
     type="module"
@@ -29,12 +39,16 @@
               </div>
 
               <h1 class="h3 fw-bold mb-2">
-                Masuk ke RuangAman
+                <?= htmlspecialchars($app_name) ?>
               </h1>
 
-              <p class="text-body-secondary mb-0">
+              <p class="text-body-secondary mb-1">
                 Pilih akses sesuai kebutuhan Anda untuk
                 melanjutkan ke portal masing-masing.
+              </p>
+
+              <p class="small text-body-secondary mb-0">
+                Environment: <?= htmlspecialchars($app_env) ?>
               </p>
 
             </div>
